@@ -20,7 +20,7 @@ class Gift(models.Model):
         editable = False,
         blank = True
         )
-    url = models.URLField(blank = True)
+    url = models.URLField(null = True, blank = True)
     price = models.IntegerField(null = True, blank = True)
 
     def __unicode__(self):
