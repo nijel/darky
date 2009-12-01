@@ -43,3 +43,19 @@ class Gift(models.Model):
     def get_absolute_url(self):
          return ('wishlist.views.gift', (), {'giftid': self.id, 'userid': self.owner.username})
 
+    def get_edit_url(self):
+        return '%sedit/' % self.get_absolute_url()
+
+    def get_buy_url(self):
+        return '%sbuy/' % self.get_absolute_url()
+
+    def get_revoke_url(self):
+        return '%srevoke/' % self.get_absolute_url()
+
+    def buy(self, user):
+        self.buyer = user
+        self.save()
+
+    def revoke(self):
+        self.buyer = None
+        self.save()

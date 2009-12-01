@@ -15,7 +15,19 @@
 <th><a href="{{ gift.get_absolute_url }}">{{ gift.title }}</a></th>
 <td>{% if gift.price %}{{ gift.price }}{% else %}{% trans "Not defined" %}{% endif %}</td>
 <td>{{ gift.get_priority_display }}</td>
-<td></td>
+<td>
+{% ifequal gift.owner user %}
+<a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a>
+{% else %}
+{% if gift.buyer %}
+{% else %}
+<a href="{{ gift.get_buy_url }}">{% trans "Buy" %}</a>
+{% endif %}
+{% endifequal %}
+{% ifequal gift.buyer user %}
+<a href="{{ gift.get_revoke_url }}">{% trans "Revoke" %}</a>
+{% endifequal %}
+</td>
 </tr>
 {% endfor %}
 </tbody>

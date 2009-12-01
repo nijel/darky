@@ -38,7 +38,41 @@ def create(request):
             gift = form.save(commit=False)
             gift.owner = request.user
             gift.save()
-            msg_ok(request, _('Gift created'))
+            msg_ok(request, _('Gift "%s" created.') % gift.title)
+            return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
+        msg_err(request, _('Gift not created!'))
+    else:
+        form = NewGift() # An unbound form
+
+    return render_to_response('create.html', RequestContext(request,{'form': form }))
+
+@login_required
+def buy(request, userid, giftid):
+    gift = get_object_or_404(Gift, pk = int(giftid))
+    if gift.owner.username != userid:
+        raise Http404('User on gift do not match!')
+    gift.buy(request.user)
+    msg_ok(request, _('Gift "%s" marked as bought.') % gift.title)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+@login_required
+def revoke(request, userid, giftid):
+    gift = get_object_or_404(Gift, pk = int(giftid))
+    if gift.owner.username != userid:
+        raise Http404('User on gift do not match!')
+    gift.revoke()
+    msg_ok(request, _('Gift "%s" no longer marked as bought.') % gift.title)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+@login_required
+def edit(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = NewGift(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            gift = form.save(commit=False)
+            gift.owner = request.user
+            gift.save()
+            msg_ok(request, _('Gift "%s" created.') % gift.title)
             return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
         msg_err(request, _('Gift not created!'))
     else:
