@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-01 22:02+0100\n"
-"PO-Revision-Date: 2009-12-01 22:03+0100\n"
+"POT-Creation-Date: 2009-12-01 22:13+0100\n"
+"PO-Revision-Date: 2009-12-01 22:13+0100\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,6 +39,14 @@ msgstr "Vytvořit"
 #: html/create.html:5 html/create.html.py:9
 msgid "Create new gift"
 msgstr "Vytvořit nový dárek"
+
+#: html/edit.html:5 html/edit.html.py:9
+msgid "Edit gift"
+msgstr "Upravit dárek"
+
+#: html/edit.html:16
+msgid "Save"
+msgstr "Uložit"
 
 #: html/gift.html:12
 msgid "You are currently marked as buyer of this gift."
@@ -139,15 +147,19 @@ msgid "Very high"
 msgstr "Velmi vysoká"
 
 #: wishlist/models.py:24
-msgid "Description, you can use markdown."
-msgstr "Popisek, můžete použít markdown."
+msgid ""
+"Description, you can use <a href=\"http://daringfireball.net/projects/"
+"markdown/syntax\">markdown</a>."
+msgstr ""
+"Popisek, můžeš použít <a href=\"http://daringfireball.net/projects/markdown/"
+"syntax\">markdown</a>."
 
-#: wishlist/views.py:46 wishlist/views.py:80
+#: wishlist/views.py:46
 #, python-format
 msgid "Gift \"%s\" created."
 msgstr "Dárek \"%s\" vytvořen."
 
-#: wishlist/views.py:48 wishlist/views.py:82
+#: wishlist/views.py:48
 msgid "Gift not created!"
 msgstr "Dárek nebyl vytvořen!"
 
@@ -160,3 +172,15 @@ msgstr "Dárek \"%s\" označen jako koupený."
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
 msgstr "Dárek \"%s\" již není označen jako koupený."
+
+#: wishlist/views.py:81
+#, python-format
+msgid "Gift \"%s\" updated."
+msgstr "Dárek \"%s\" upraven."
+
+#: wishlist/views.py:83
+msgid "Gift not updated!"
+msgstr "Dárek nebyl upraven!"
+
+#~ msgid "Description, you can use markdown."
+#~ msgstr "Popisek, můžete použít markdown."
