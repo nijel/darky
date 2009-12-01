@@ -10,7 +10,7 @@ from django.utils.safestring import mark_safe
 class NewGift(ModelForm):
 
     class Meta:
-        model = Phone
+        model = Gift
         fields = (
             'title',
             'description',
