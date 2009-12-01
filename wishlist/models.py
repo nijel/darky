@@ -23,6 +23,9 @@ class Gift(models.Model):
     url = models.URLField(blank = True)
     price = models.IntegerField(null = True, blank = True)
 
+    def __unicode__(self):
+        return '%s (%s)' % (self.title, self.owner.get_full_name())
+
     def save(self):
         self.description_html = markdown.markdown(self.description)
         super(Gift, self).save()
