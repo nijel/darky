@@ -13,6 +13,7 @@ PRIORITY_CHOICES = (
     (4, ugettext_lazy('High')),
     (5, ugettext_lazy('Very high')),
     )
+
 class Gift(models.Model):
     owner = models.ForeignKey(User, related_name = 'present_set')
     buyer = models.ForeignKey(User, null = True, blank = True, related_name = 'given_set')
@@ -37,3 +38,8 @@ class Gift(models.Model):
     def save(self):
         self.description_html = markdown.markdown(self.description)
         super(Gift, self).save()
+
+    @models.permalink
+    def get_absolute_url(self):
+         return ('wishlist.views.gift', (), {'giftid': self.id, 'userid': self.owner.username})
+
