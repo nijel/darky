@@ -6,20 +6,23 @@ from django.utils.translation import ugettext_lazy
 
 import markdown
 
-class Present(models.Model):
-    user = models.ForeignKey(User)
+class Gift(models.Model):
+    owner = models.ForeignKey(User, related_name = 'present_set')
+    buyer = models.ForeignKey(User, null = True, blank = True, related_name = 'given_set')
     title = models.CharField(
         max_length = 250
         )
     description = models.TextField(
-        help_text = ugettext_lazy('Description, you can use markdown.')
+        help_text = ugettext_lazy('Description, you can use markdown.'),
+        blank = True
         )
     description_html = models.TextField(
         editable = False,
         blank = True
         )
-    url = models.URLField()
+    url = models.URLField(blank = True)
+    price = models.IntegerField(null = True, blank = True)
 
     def save(self):
         self.description_html = markdown.markdown(self.description)
-        super(Category, self).save()
+        super(Gift, self).save()
