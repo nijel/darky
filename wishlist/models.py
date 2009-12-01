@@ -17,20 +17,18 @@ PRIORITY_CHOICES = (
 class Gift(models.Model):
     owner = models.ForeignKey(User, related_name = 'present_set')
     buyer = models.ForeignKey(User, null = True, blank = True, related_name = 'given_set')
-    title = models.CharField(
-        max_length = 250
-        )
-    description = models.TextField(
-        help_text = ugettext_lazy('Description, you can use <a href="http://daringfireball.net/projects/markdown/syntax">markdown</a>.'),
+    title = models.CharField(ugettext_lazy('Title'), max_length = 250)
+    description = models.TextField(ugettext_lazy('Description'),
+        help_text = ugettext_lazy('You can use <a href="http://daringfireball.net/projects/markdown/syntax">markdown</a>.'),
         blank = True
         )
     description_html = models.TextField(
         editable = False,
         blank = True
         )
-    url = models.URLField(null = True, blank = True)
-    price = models.IntegerField(null = True, blank = True)
-    priority = models.IntegerField(choices = PRIORITY_CHOICES, default = 3)
+    url = models.URLField(ugettext_lazy('Link'), null = True, blank = True)
+    price = models.IntegerField(ugettext_lazy('Expected price'), null = True, blank = True)
+    priority = models.IntegerField(ugettext_lazy('Priority'), choices = PRIORITY_CHOICES, default = 3)
 
     def __unicode__(self):
         return '%s (%s)' % (self.title, self.owner.get_full_name())

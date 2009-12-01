@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-01 22:13+0100\n"
-"PO-Revision-Date: 2009-12-01 22:13+0100\n"
+"POT-Creation-Date: 2009-12-01 22:34+0100\n"
+"PO-Revision-Date: 2009-12-01 22:35+0100\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -88,7 +88,7 @@ msgstr "Vrátit"
 msgid "User"
 msgstr "Uživatel"
 
-#: html/list.html:9
+#: html/list.html:9 wishlist/models.py:20
 msgid "Title"
 msgstr "Název"
 
@@ -96,7 +96,7 @@ msgstr "Název"
 msgid "Price"
 msgstr "Cena"
 
-#: html/list.html:11
+#: html/list.html:11 wishlist/models.py:31
 msgid "Priority"
 msgstr "Priorita"
 
@@ -146,13 +146,25 @@ msgstr "Vysoká"
 msgid "Very high"
 msgstr "Velmi vysoká"
 
-#: wishlist/models.py:24
+#: wishlist/models.py:21
+msgid "Description"
+msgstr "Popis"
+
+#: wishlist/models.py:22
 msgid ""
-"Description, you can use <a href=\"http://daringfireball.net/projects/"
-"markdown/syntax\">markdown</a>."
+"You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
+"\">markdown</a>."
 msgstr ""
-"Popisek, můžeš použít <a href=\"http://daringfireball.net/projects/markdown/"
-"syntax\">markdown</a>."
+"Můžeš použít <a href=\"http://daringfireball.net/projects/markdown/syntax"
+"\">markdown</a>."
+
+#: wishlist/models.py:29
+msgid "Link"
+msgstr "Odkaz"
+
+#: wishlist/models.py:30
+msgid "Expected price"
+msgstr "Odhadovaná cena"
 
 #: wishlist/views.py:46
 #, python-format
