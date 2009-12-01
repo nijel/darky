@@ -8,6 +8,8 @@
 
 <h2>{{ gift.title }}</h2>
 
+<p><strong>{% trans "Priority:" %}</strong> {{ gift.get_priority_display }}</p>
+
 {% if gift.price %}
 <p><strong>{% trans "Estimated price:" %}</strong> {{ gift.price }}</p>
 {% endif %}
