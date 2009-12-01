@@ -70,17 +70,18 @@ def revoke(request, userid, giftid):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 @login_required
-def edit(request):
+def edit(request, userid, giftid):
+    gift = get_object_or_404(Gift, pk = int(giftid))
+    if gift.owner.username != userid:
+        raise Http404('User on gift do not match!')
     if request.method == 'POST': # If the form has been submitted...
-        form = NewGift(request.POST) # A form bound to the POST data
+        form = NewGift(request.POST, instance = gift) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
-            gift = form.save(commit=False)
-            gift.owner = request.user
-            gift.save()
-            msg_ok(request, _('Gift "%s" created.') % gift.title)
+            form.save()
+            msg_ok(request, _('Gift "%s" updated.') % gift.title)
             return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
-        msg_err(request, _('Gift not created!'))
+        msg_err(request, _('Gift not updated!'))
     else:
-        form = NewGift() # An unbound form
+        form = NewGift(instance = gift) # An unbound form
 
-    return render_to_response('create.html', RequestContext(request,{'form': form }))
+    return render_to_response('edit.html', RequestContext(request,{'form': form, 'gift': gift }))
