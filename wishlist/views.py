@@ -37,7 +37,7 @@ def create(request):
             gift.owner = request.user
             gift.save()
             msg_ok(request, _('Gift created'))
-            return HttpResponseRedirect('/') # Redirect after POST
+            return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
         msg_err(request, _('Gift not created!'))
     else:
         form = NewGift() # An unbound form
