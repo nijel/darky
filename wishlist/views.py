@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
 from django.db.models import Q
 from django.utils.translation import ugettext as _
+from django.template import RequestContext
 
 from wishlist.models import Gift
 from wishlist.forms import NewGift
@@ -9,11 +10,11 @@ from wishlist.forms import NewGift
 from wishlist.messages import msg_ok, msg_err
 
 def overview(request):
-    return render_to_response('overview.html')
+    return render_to_response('overview.html', RequestContext(request))
 
 def gift(request, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
-    return render_to_response('gift.html', {'gift': gift})
+    return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
 
 def create(request):
     if request.method == 'POST': # If the form has been submitted...
@@ -27,6 +28,4 @@ def create(request):
     else:
         form = NewGift() # An unbound form
 
-    return render_to_response('create.html', {
-        'form': form,
-    })
+    return render_to_response('create.html', RequestContext(request,{'form': form }))
