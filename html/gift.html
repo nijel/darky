@@ -8,6 +8,14 @@
 
 <h2>{{ gift.title }}</h2>
 
+{% ifequal gift.buyer user %}
+<p>{% trans "You are currently marked as buyer of this gift." %}</p>
+{% else %}
+{% if gift.buyer %}
+<p>{% trans "This item is marked as bought." %}</p>
+{% endif %}
+{% endifequal %}
+
 <p><strong>{% trans "Priority:" %}</strong> {{ gift.get_priority_display }}</p>
 
 {% if gift.price %}
@@ -20,4 +28,18 @@
 
 {{ gift.description_html|safe }}
 
+<p><strong>{% trans "Actions:" %}</strong></p>
+<ul>
+{% ifequal gift.owner user %}
+<li><a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a></li>
+{% else %}
+{% if gift.buyer %}
+{% else %}
+<li><a href="{{ gift.get_buy_url }}">{% trans "Buy" %}</a></li>
+{% endif %}
+{% endifequal %}
+{% ifequal gift.buyer user %}
+<li><a href="{{ gift.get_revoke_url }}">{% trans "Revoke" %}</a></li>
+{% endifequal %}
+</ul>
 {% endblock %}
