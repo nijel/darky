@@ -70,6 +70,16 @@ def revoke(request, userid, giftid):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 @login_required
+def delete(request, userid, giftid):
+    gift = get_object_or_404(Gift, pk = int(giftid))
+    if gift.owner.username != userid:
+        raise Http404('User on gift do not match!')
+    title = gift.title
+    gift.delete()
+    msg_ok(request, _('Gift "%s" deleted.') % title)
+    return HttpResponseRedirect('/')
+
+@login_required
 def edit(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
     if gift.owner.username != userid:

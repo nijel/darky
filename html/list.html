@@ -24,6 +24,7 @@
 <td class="action">
 {% ifequal gift.owner user %}
 <a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a>
+<a href="{{ gift.get_delete_url }}">{% trans "Delete" %}</a>
 {% else %}
 {% if gift.buyer %}
 {% else %}

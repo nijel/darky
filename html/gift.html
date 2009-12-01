@@ -33,6 +33,7 @@
 <ul>
 {% ifequal gift.owner user %}
 <li><a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a></li>
+<li><a href="{{ gift.get_delete_url }}">{% trans "Delete" %}</a></li>
 {% else %}
 {% if gift.buyer %}
 {% else %}

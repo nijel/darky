@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-02 00:41+0100\n"
-"PO-Revision-Date: 2009-12-02 00:41+0100\n"
+"POT-Creation-Date: 2009-12-02 00:45+0100\n"
+"PO-Revision-Date: 2009-12-02 00:45+0100\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -80,11 +80,15 @@ msgstr "Akce:"
 msgid "Edit"
 msgstr "Upravit"
 
-#: html/gift.html:39 html/list.html:30
+#: html/gift.html:36 html/list.html:27
+msgid "Delete"
+msgstr "Odstranit"
+
+#: html/gift.html:40 html/list.html:31
 msgid "Buy"
 msgstr "Koupit"
 
-#: html/gift.html:43 html/list.html:34
+#: html/gift.html:44 html/list.html:35
 msgid "Revoke"
 msgstr "Vrátit"
 
@@ -173,7 +177,7 @@ msgstr "Odhadovaná cena"
 #: wishlist/views.py:46
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr "Dárek \"%s\" vytvořen."
+msgstr "Dárek \"%s\" byl vytvořen."
 
 #: wishlist/views.py:48
 msgid "Gift not created!"
@@ -182,21 +186,26 @@ msgstr "Dárek nebyl vytvořen!"
 #: wishlist/views.py:60
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr "Dárek \"%s\" označen jako koupený."
+msgstr "Dárek \"%s\" byl označen jako koupený."
 
 #: wishlist/views.py:69
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
 msgstr "Dárek \"%s\" již není označen jako koupený."
 
-#: wishlist/views.py:81
+#: wishlist/views.py:79
+#, python-format
+msgid "Gift \"%s\" deleted."
+msgstr "Dárek \"%s\" byl odstraněn."
+
+#: wishlist/views.py:91
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr "Dárek \"%s\" upraven."
+msgstr "Dárek \"%s\" byl změněn."
 
-#: wishlist/views.py:83
+#: wishlist/views.py:93
 msgid "Gift not updated!"
-msgstr "Dárek nebyl upraven!"
+msgstr "Dárek nebyl změněn!"
 
 #~ msgid "Description, you can use markdown."
 #~ msgstr "Popisek, můžete použít markdown."

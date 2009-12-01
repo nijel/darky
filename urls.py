@@ -31,4 +31,5 @@ urlpatterns = patterns('',
     (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$', 'wishlist.views.buy'),
     (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$', 'wishlist.views.revoke'),
     (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$', 'wishlist.views.edit'),
+    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$', 'wishlist.views.delete'),
 )
