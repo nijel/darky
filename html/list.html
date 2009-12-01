@@ -1,0 +1,22 @@
+{% load i18n %}
+
+<table>
+<thead>
+<tr>
+<th>{% trans "Title" %}</th>
+<th>{% trans "Price" %}</th>
+<th>{% trans "Priority" %}</th>
+<th>{% trans "Actions" %}</th>
+</tr>
+</thead>
+<tbody>
+{% for gift in gifts %}
+<tr>
+<th><a href="{{ gift.get_absolute_url }}">{{ gift.title }}</a></th>
+<td>{% if gift.price %}{{ gift.price }}{% else %}{% trans "Not defined" %}{% endif %}</td>
+<td>{{ gift.get_priority_display }}</td>
+<td></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
