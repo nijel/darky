@@ -25,7 +25,7 @@ def userlist(request, userid):
 @login_required
 def gift(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
-    if gift.user.username != userid:
+    if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
 

@@ -6,6 +6,16 @@
 
 {% block content %}
 
-Gift.
+<h2>{{ gift.title }}</h2>
+
+{% if gift.price %}
+<p><strong>{% trans "Estimated price:" %}</strong> {{ gift.price }}</p>
+{% endif %}
+
+{% if gift.url %}
+<p><strong>{% trans "More details:" %}</strong> <a href="{{ gift.url }}">{{ gift.url }}</a></p>
+{% endif %}
+
+{{ gift.description_html|safe }}
 
 {% endblock %}
