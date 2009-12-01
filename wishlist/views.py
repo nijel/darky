@@ -18,8 +18,9 @@ def overview(request):
 
 @login_required
 def userlist(request, userid):
-    gift = get_object_or_404(User, username = userid)
-    return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
+    user = get_object_or_404(User, username = userid)
+    gifts = Gift.objects.filter(owner = user)
+    return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts}))
 
 @login_required
 def gift(request, userid, giftid):
