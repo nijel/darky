@@ -11,11 +11,11 @@
 </thead>
 <tbody>
 {% for gift in gifts %}
-<tr>
-<th><a href="{{ gift.get_absolute_url }}">{{ gift.title }}</a></th>
+<tr class="{% ifequal gift.buyer user %}buyer{% else %}{% if gift.buyer %}bought{% endif %}{% endifequal %}">
+<td><a href="{{ gift.get_absolute_url }}">{{ gift.title }}</a></td>
 <td>{% if gift.price %}{{ gift.price }}{% else %}{% trans "Not defined" %}{% endif %}</td>
 <td>{{ gift.get_priority_display }}</td>
-<td>
+<td class="action">
 {% ifequal gift.owner user %}
 <a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a>
 {% else %}

@@ -208,3 +208,13 @@ div.multiaction {
     font-weight: bolder;
     text-decoration: none;
 }
+
+tr.buyer td, tr.buyer th {
+    font-weight: bolder;
+}
+tr.bought td, tr.bought th {
+    text-decoration: line-through;
+}
+tr.bought td.action { 
+    text-decoration: none;
+}
