@@ -21,9 +21,9 @@ def create(request):
         if form.is_valid(): # All validation rules pass
             # Process the data in form.cleaned_data
             # ...
-            msg_ok(_('Gift created'))
+            msg_ok(request, _('Gift created'))
             return HttpResponseRedirect('/') # Redirect after POST
-        msg_err(_('Gift not created!'))
+        msg_err(request, _('Gift not created!'))
     else:
         form = NewGift() # An unbound form
 
