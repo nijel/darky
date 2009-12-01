@@ -21,7 +21,7 @@ class Gift(models.Model):
         max_length = 250
         )
     description = models.TextField(
-        help_text = ugettext_lazy('Description, you can use markdown.'),
+        help_text = ugettext_lazy('Description, you can use <a href="http://daringfireball.net/projects/markdown/syntax">markdown</a>.'),
         blank = True
         )
     description_html = models.TextField(
