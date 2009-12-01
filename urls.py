@@ -8,7 +8,6 @@ urlpatterns = patterns('',
     # Example:
     # (r'^darky/', include('darky.foo.urls')),
     (r'^$', 'wishlist.views.overview'),
-    (r'^gift/(?P<userid>[^/]*)/(?P<giftid>\d*)/$', 'wishlist.views.gift'),
     (r'^create/$', 'wishlist.views.create'),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
@@ -21,4 +20,8 @@ urlpatterns = patterns('',
     # Static media for development
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': './media'}),
+
+    # Need to be last to avoid conflicts on userid
+    (r'^(?P<userid>[^/]*)/$', 'wishlist.views.userlist'),
+    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/$', 'wishlist.views.gift'),
 )
