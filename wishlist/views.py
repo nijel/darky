@@ -14,7 +14,8 @@ from wishlist.messages import msg_ok, msg_err
 
 @login_required
 def overview(request):
-    return render_to_response('overview.html', RequestContext(request))
+    gifts = Gift.objects.all().order_by('-priority')
+    return render_to_response('overview.html', RequestContext(request, {'gifts': gifts}))
 
 @login_required
 def userlist(request, userid):
