@@ -24,6 +24,11 @@ def userlist(request, userid):
     return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts}))
 
 @login_required
+def buylist(request):
+    gifts = Gift.objects.filter(buyer = request.user).order_by('-priority')
+    return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts, 'show_user': True}))
+
+@login_required
 def gift(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
     if gift.owner.username != userid:

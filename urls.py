@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # (r'^darky/', include('darky.foo.urls')),
     (r'^$', 'wishlist.views.overview'),
     (r'^create/$', 'wishlist.views.create'),
+    (r'^buy/$', 'wishlist.views.buylist'),
 
     (r'^login/$', 'django.contrib.auth.views.login'),
     (r'^logout/$', 'django.contrib.auth.views.logout'),

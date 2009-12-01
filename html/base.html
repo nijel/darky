@@ -11,6 +11,7 @@
     {% if user.is_authenticated %}
         <li><a href="/">{% trans "Overview" %}</a></li>
         <li><a href="/{{ user.username }}/">{% trans "Own" %}</a></li>
+        <li><a href="/buy/">{% trans "Buying" %}</a></li>
         <li><a href="/create/">{% trans "Create" %}</a></li>
     {% if user.is_superuser %}
         <li><a href="/admin/">Admin</a></li>
