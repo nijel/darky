@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load i18n %}
+{% load messages %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+<head>
+    <title>{% trans "Gifts" %} - {% block title %}{% trans "Overview" %}{% endblock %}</title>
+    <link rel="stylesheet" href="/media/style.css" />
+</head>
+<body>
+    <ul class="navbar">
+    {% if user.is_authenticated %}
+        <li><a href="/">{% trans "Overview" %}</a></li>
+        <li><a href="/gift/{{ user.username }}/">{% trans "Own" %}</a></li>
+    {% if user.is_superuser %}
+        <li><a href="/admin/">Admin</a></li>
+    {% endif %}
+        <li><a href="/logout/">Logout</a></li>
+    {% endif %}
+    </ul>
+    <h1><a href="/">{% trans "Gifts" %}</a></h1>
+    <ul class="actions">
+    </ul>
+
+    <div id="content">
+    {% if messages %}
+    {% for message in messages %}
+    <p class="{{ message|msgtype }}">{{ message|msgtext}}</p>
+    {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
+
