@@ -1,4 +1,5 @@
 # Django settings for darky project.
+# -*- coding: UTF-8 -*-
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
