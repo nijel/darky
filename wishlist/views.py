@@ -3,6 +3,7 @@ from django.http import Http404, HttpResponseRedirect
 from django.db.models import Q
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 
@@ -11,19 +12,23 @@ from wishlist.forms import NewGift
 
 from wishlist.messages import msg_ok, msg_err
 
+@login_required
 def overview(request):
     return render_to_response('overview.html', RequestContext(request))
 
+@login_required
 def userlist(request, userid):
     gift = get_object_or_404(User, username = userid)
     return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
 
+@login_required
 def gift(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
     if gift.user.username != userid:
         raise Http404('User on gift do not match!')
     return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
 
+@login_required
 def create(request):
     if request.method == 'POST': # If the form has been submitted...
         form = NewGift(request.POST) # A form bound to the POST data

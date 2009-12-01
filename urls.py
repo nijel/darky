@@ -10,6 +10,9 @@ urlpatterns = patterns('',
     (r'^$', 'wishlist.views.overview'),
     (r'^create/$', 'wishlist.views.create'),
 
+    (r'^login/$', 'django.contrib.auth.views.login'),
+    (r'^logout/$', 'django.contrib.auth.views.logout'),
+
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
