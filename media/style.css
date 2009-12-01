@@ -18,6 +18,7 @@ ul.filters {
 ul.navbar {
     float: right;
     display: block;
+    margin: 0.1em;
 }
 
 ul.navbar li {
@@ -161,4 +162,49 @@ div.multiaction {
     padding-left: 45px;
     margin-left: 5px;
     margin-top: 1em;
+}
+
+.fieldedit {
+	list-style: none;
+	border: 1px solid #ccc;
+	margin: 0.1em auto 10px auto;
+	padding: 0.1em 5% 0.1em 5%;
+}
+
+.fieldedit .fieldname {
+    display: none;
+}
+
+.fieldedit .delete:before {
+    content: '[';
+}
+.fieldedit .delete:after {
+    content: ']';
+}
+.fieldedit .delete {
+    float: right;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.fieldedit .link:before {
+    content: '[';
+}
+.fieldedit .link:after {
+    content: ']';
+}
+.fieldedit .link {
+    float: right;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.fieldedit .type:before {
+    content: '[';
+}
+.fieldedit .type:after {
+    content: ']';
+}
+.fieldedit .type {
+    float: right;
+    font-weight: bolder;
+    text-decoration: none;
 }
