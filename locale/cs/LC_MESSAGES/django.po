@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-02 01:23+0100\n"
-"PO-Revision-Date: 2009-12-02 01:23+0100\n"
+"POT-Creation-Date: 2009-12-02 20:51+0100\n"
+"PO-Revision-Date: 2009-12-02 20:52+0100\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,10 @@ msgstr "Kupuji"
 #: html/base.html:15 html/create.html:16
 msgid "Create"
 msgstr "Vytvořit"
+
+#: html/base.html:19
+msgid "Logout"
+msgstr "Odhlásit"
 
 #: html/buylist.html:5 html/buylist.html.py:9
 msgid "Gifts to buy"
