@@ -26,7 +26,7 @@ def userlist(request, userid):
 @login_required
 def buylist(request):
     gifts = Gift.objects.filter(buyer = request.user).order_by('-priority')
-    return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts, 'show_user': True}))
+    return render_to_response('buylist.html', RequestContext(request, {'gifts': gifts, 'show_user': True}))
 
 @login_required
 def gift(request, userid, giftid):
