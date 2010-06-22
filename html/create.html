@@ -9,6 +9,7 @@
 <h2>{% trans "Create new gift" %}</h2>
 
 <form method="POST" action=".">
+{% csrf_token %}
 <table>
 {{ form.as_table }}
 <tr>
