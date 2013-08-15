@@ -144,3 +144,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/'
+
+ALLOWED_HOSTS = ('darky.cihar.com', '127.0.0.1')
