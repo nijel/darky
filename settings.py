@@ -56,6 +56,8 @@ USE_TZ = False
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = '%s/media/' % WEB_ROOT
 
+LOCALE_PATHS = '%s/locale' % WEB_ROOT
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
