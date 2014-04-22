@@ -38,6 +38,9 @@ TIME_ZONE = 'Europe/Prague'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'cs-cz'
+LANGUAGES = (
+    ('cs', u'Česky'),
+)
 
 SITE_ID = 1
 
@@ -54,9 +57,9 @@ USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '%s/media/' % WEB_ROOT
+MEDIA_ROOT = os.path.join(WEB_ROOT, 'media')
 
-LOCALE_PATHS = ('%s/locale' % WEB_ROOT, )
+LOCALE_PATHS = (os.path.join(WEB_ROOT, 'locale'), )
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
