@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 
 {% load i18n %}
+{% load crispy_forms_tags %}
 
 {% block title %}{% trans "Edit gift" %}{% endblock %}
 
 {% block content %}
 
-<h2>{% trans "Edit gift" %}</h2>
-
 <form method="POST" action=".">
 {% csrf_token %}
-<table>
-{{ form.as_table }}
-<tr>
-<td></td>
-<td><input type="submit" value="{% trans "Save" %}" /></td>
-</tr>
-</table>
+
+<div class="panel panel-primary">
+<div class="panel-heading">{% trans "Edit gift" %}</div>
+
+<div class="panel-body">
+{{ form|crispy }}
+</div>
+
+<div class="panel-footer">
+<input type="submit" value="{% trans "Save" %}" class="btn btn-default" />
+</div>
+</div>
 </form>
 
 {% endblock %}
-
