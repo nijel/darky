@@ -56,7 +56,7 @@ def create(request):
             obj.save()
             messages.success(request, _('Gift "%s" created.') % obj.title)
             # Redirect after POST
-            return redirect('/%s/' % request.user.username)
+            return redirect('/')
         messages.error(request, _('Gift not created!'))
     else:
         # An unbound form
@@ -112,7 +112,7 @@ def edit(request, userid, giftid):
             form.save()
             messages.success(request, _('Gift "%s" updated.') % obj.title)
             # Redirect after POST
-            return redirect('/%s/' % request.user.username)
+            return redirect('/')
         messages.error(request, _('Gift not updated!'))
     else:
         # An unbound form
