@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"POT-Creation-Date: 2014-10-23 14:54+0200\n"
 "PO-Revision-Date: 2014-10-23 14:41+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
@@ -56,7 +56,6 @@ msgstr "Dárky které kupuji"
 
 #: html/create.html:9 html/create.html.py:26
 #, python-format
-#| msgid "Create new gift"
 msgid "Create new gift for %(name)s"
 msgstr "Vytvořit nový dárek pro uživatele %(name)s"
 
@@ -117,19 +116,19 @@ msgstr "Více podrobností:"
 msgid "Actions:"
 msgstr "Akce:"
 
-#: html/gift.html:35 html/list.html:26
+#: html/gift.html:35 html/list.html:40
 msgid "Edit"
 msgstr "Upravit"
 
-#: html/gift.html:36 html/list.html:27
+#: html/gift.html:36 html/list.html:41
 msgid "Delete"
 msgstr "Odstranit"
 
-#: html/gift.html:40 html/list.html:30
+#: html/gift.html:40 html/list.html:44
 msgid "Buy"
 msgstr "Koupit"
 
-#: html/gift.html:44 html/list.html:33
+#: html/gift.html:44 html/list.html:47
 msgid "Revoke"
 msgstr "Vrátit"
 
@@ -153,6 +152,10 @@ msgstr "Cena"
 msgid "Priority"
 msgstr "Priorita"
 
+#: html/list.html:11
+msgid "P"
+msgstr ""
+
 #: html/list.html:12
 msgid "Actions"
 msgstr "Akce"
@@ -161,11 +164,11 @@ msgstr "Akce"
 msgid "Not defined"
 msgstr "Nezadáno"
 
-#: html/list.html:38
+#: html/list.html:52
 msgid "Taken"
 msgstr "Zabráno"
 
-#: html/list.html:41
+#: html/list.html:55
 msgid "Private"
 msgstr "Soukromý"
 
