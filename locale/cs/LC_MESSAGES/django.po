@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-23 14:38+0200\n"
-"PO-Revision-Date: 2014-10-23 13:32+0200\n"
+"PO-Revision-Date: 2014-10-23 14:41+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
 "Language: cs\n"
@@ -40,7 +40,7 @@ msgstr "Kupuji"
 
 #: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
 msgid "Add"
-msgstr ""
+msgstr "Přidat"
 
 #: html/base.html:40
 msgid "Wishlists"
@@ -55,10 +55,10 @@ msgid "Gifts to buy"
 msgstr "Dárky které kupuji"
 
 #: html/create.html:9 html/create.html.py:26
-#, fuzzy, python-format
+#, python-format
 #| msgid "Create new gift"
 msgid "Create new gift for %(name)s"
-msgstr "Vytvořit nový dárek"
+msgstr "Vytvořit nový dárek pro uživatele %(name)s"
 
 #: html/create.html:11 html/create.html.py:28
 msgid "Create new gift"
@@ -69,11 +69,13 @@ msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
 msgstr ""
+"Přidáváte dárek pro někoho jiného. Bude viditelný jen pro vás, aby jste si "
+"ho mohli zapamatovat."
 
 #: html/create.html:39
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr ""
+msgstr "Přidáváte dárek pro uživatele %(name)s."
 
 #: html/create.html:42
 msgid "Create"
@@ -133,7 +135,7 @@ msgstr "Vrátit"
 
 #: html/list-add.html:4
 msgid "You can add here gifts you want to buy to this person."
-msgstr ""
+msgstr "Můžete zde zadat dárky které chcete koupit této osobě."
 
 #: html/list.html:7
 msgid "User"
@@ -165,7 +167,7 @@ msgstr "Zabráno"
 
 #: html/list.html:41
 msgid "Private"
-msgstr ""
+msgstr "Soukromý"
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
