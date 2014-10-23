@@ -22,18 +22,20 @@
 <td>{% if gift.price %}{{ gift.price }}{% else %}{% trans "Not defined" %}{% endif %}</td>
 <td>{{ gift.get_priority_display }}</td>
 <td class="action">
-{% ifequal gift.owner user %}
+{% if gift.owner == user %}
 <a href="{{ gift.get_edit_url }}" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> {% trans "Edit" %}</a>
 <a href="{{ gift.get_delete_url }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> {% trans "Delete" %}</a>
 {% else %}
-{% if gift.buyer %}
-{% else %}
+{% if not gift.buyer %}
 <a href="{{ gift.get_buy_url }}" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span> {% trans "Buy" %}</a>
-{% endif %}
-{% endifequal %}
-{% ifequal gift.buyer user %}
+{% else %}
+{% if gift.buyer == user %}
 <a href="{{ gift.get_revoke_url }}" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> {% trans "Revoke" %}</a>
-{% endifequal %}
+{% else %}
+<span class="badge">{% trans "Taken" %}</span>
+{% endif %}
+{% endif %}
+{% endif %}
 </td>
 </tr>
 {% endfor %}
