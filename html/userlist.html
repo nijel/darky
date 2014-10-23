@@ -13,6 +13,9 @@
 {% include "list.html" %}
 
 </div>
+{% if user == listuser %}
+{% include "list-add-own.html" %}
+{% endif %}
 </div>
 
 {% endblock %}

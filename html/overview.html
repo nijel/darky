@@ -16,6 +16,9 @@
 {% endwith %}
 
 </div>
+{% if user == gift.grouper %}
+{% include "list-add-own.html" %}
+{% endif %}
 </div>
 
 {% endfor %}
