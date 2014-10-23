@@ -31,11 +31,13 @@
 {% else %}
 {% if gift.buyer == user %}
 <a href="{{ gift.get_revoke_url }}" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> {% trans "Revoke" %}</a>
-{% else %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% if gift.buyer and gift.buyer != user %}
 <span class="badge">{% trans "Taken" %}</span>
 {% endif %}
-{% endif %}
-{% endif %}
+
 </td>
 </tr>
 {% endfor %}
