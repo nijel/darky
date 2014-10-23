@@ -22,7 +22,7 @@ def overview(request):
 def userlist(request, userid):
     user = get_object_or_404(User, username = userid)
     gifts = Gift.objects.filter(owner = user).order_by('-priority')
-    return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts, 'user': user}))
+    return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts, 'listuser': user}))
 
 
 @login_required
