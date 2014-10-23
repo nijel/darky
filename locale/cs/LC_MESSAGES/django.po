@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-23 13:31+0200\n"
-"PO-Revision-Date: 2014-10-23 12:43+0200\n"
+"PO-Revision-Date: 2014-10-23 13:32+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
 "Language: cs\n"
@@ -44,7 +44,7 @@ msgstr "Vytvořit"
 
 #: html/base.html:40
 msgid "Wishlists"
-msgstr ""
+msgstr "Seznamy dárků"
 
 #: html/base.html:54
 msgid "Logout"
