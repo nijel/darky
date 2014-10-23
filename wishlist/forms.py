@@ -12,4 +12,4 @@ class NewGift(ModelForm):
             'url',
             'price',
             'priority',
-            )
+        )

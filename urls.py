@@ -5,7 +5,8 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Example:
     # (r'^darky/', include('darky.foo.urls')),
     (r'^$', 'wishlist.views.overview'),
