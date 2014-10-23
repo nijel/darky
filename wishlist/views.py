@@ -1,5 +1,5 @@
-from django.shortcuts import render_to_response, get_object_or_404
-from django.http import Http404, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
@@ -14,20 +14,20 @@ from wishlist.forms import NewGift
 @login_required
 def overview(request):
     gifts = Gift.objects.all().order_by('owner', '-priority')
-    return render_to_response('overview.html', RequestContext(request, {'gifts': gifts}))
+    return render(request, 'overview.html', {'gifts': gifts})
 
 
 @login_required
 def userlist(request, userid):
     user = get_object_or_404(User, username = userid)
     gifts = Gift.objects.filter(owner = user).order_by('-priority')
-    return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts, 'listuser': user}))
+    return render(request, 'userlist.html', {'gifts': gifts, 'listuser': user})
 
 
 @login_required
 def buylist(request):
     gifts = Gift.objects.filter(buyer = request.user).order_by('-priority')
-    return render_to_response('buylist.html', RequestContext(request, {'gifts': gifts, 'show_user': True}))
+    return render(request, 'buylist.html', {'gifts': gifts, 'show_user': True})
 
 
 @login_required
@@ -35,7 +35,7 @@ def gift(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
-    return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
+    return render(request, 'gift.html', {'gift': gift})
 
 
 @login_required
@@ -47,7 +47,7 @@ def create(request):
             gift.owner = request.user
             gift.save()
             messages.success(request, _('Gift "%s" created.') % gift.title)
-            return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
+            return redirect('/%s/' % request.user.username) # Redirect after POST
         messages.error(request, _('Gift not created!'))
     else:
         form = NewGift() # An unbound form
@@ -62,7 +62,7 @@ def buy(request, userid, giftid):
         raise Http404('User on gift do not match!')
     gift.buy(request.user)
     messages.success(request, _('Gift "%s" marked as bought.') % gift.title)
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    return redirect(request.META.get('HTTP_REFERER', '/'))
 
 
 @login_required
@@ -72,7 +72,7 @@ def revoke(request, userid, giftid):
         raise Http404('User on gift do not match!')
     gift.revoke()
     messages.success(request, _('Gift "%s" no longer marked as bought.') % gift.title)
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    return redirect(request.META.get('HTTP_REFERER', '/'))
 
 
 @login_required
@@ -83,7 +83,7 @@ def delete(request, userid, giftid):
     title = gift.title
     gift.delete()
     messages.success(request, _('Gift "%s" deleted.') % title)
-    return HttpResponseRedirect('/')
+    return redirect('/')
 
 
 @login_required
@@ -96,9 +96,9 @@ def edit(request, userid, giftid):
         if form.is_valid(): # All validation rules pass
             form.save()
             messages.success(request, _('Gift "%s" updated.') % gift.title)
-            return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
+            return redirect('/%s/' % request.user.username) # Redirect after POST
         messages.error(request, _('Gift not updated!'))
     else:
         form = NewGift(instance = gift) # An unbound form
 
-    return render_to_response('edit.html', RequestContext(request,{'form': form, 'gift': gift }))
+    return render(request, 'edit.html', {'form': form, 'gift': gift })
