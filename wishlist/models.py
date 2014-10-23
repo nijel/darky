@@ -50,9 +50,9 @@ class Gift(models.Model):
     def __unicode__(self):
         return '%s (%s)' % (self.title, self.owner.get_full_name())
 
-    def save(self):
+    def save(self, *args, **kwargs):
         self.description_html = markdown.markdown(self.description)
-        super(Gift, self).save()
+        super(Gift, self).save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
