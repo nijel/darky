@@ -12,7 +12,8 @@ PRIORITY_CHOICES = (
     (3, ugettext_lazy('Standard')),
     (4, ugettext_lazy('High')),
     (5, ugettext_lazy('Very high')),
-    )
+)
+
 
 class Gift(models.Model):
     owner = models.ForeignKey(User, related_name = 'present_set')

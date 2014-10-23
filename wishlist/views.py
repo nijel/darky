@@ -1,6 +1,5 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404, HttpResponseRedirect
-from django.db.models import Q
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
@@ -12,10 +11,12 @@ from wishlist.forms import NewGift
 
 from wishlist.messages import msg_ok, msg_err
 
+
 @login_required
 def overview(request):
     gifts = Gift.objects.all().order_by('owner', '-priority')
     return render_to_response('overview.html', RequestContext(request, {'gifts': gifts}))
+
 
 @login_required
 def userlist(request, userid):
@@ -23,10 +24,12 @@ def userlist(request, userid):
     gifts = Gift.objects.filter(owner = user).order_by('-priority')
     return render_to_response('userlist.html', RequestContext(request, {'gifts': gifts, 'user': user}))
 
+
 @login_required
 def buylist(request):
     gifts = Gift.objects.filter(buyer = request.user).order_by('-priority')
     return render_to_response('buylist.html', RequestContext(request, {'gifts': gifts, 'show_user': True}))
+
 
 @login_required
 def gift(request, userid, giftid):
@@ -34,6 +37,7 @@ def gift(request, userid, giftid):
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     return render_to_response('gift.html', RequestContext(request, {'gift': gift}))
+
 
 @login_required
 def create(request):
@@ -51,6 +55,7 @@ def create(request):
 
     return render_to_response('create.html', RequestContext(request,{'form': form }))
 
+
 @login_required
 def buy(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
@@ -59,6 +64,7 @@ def buy(request, userid, giftid):
     gift.buy(request.user)
     msg_ok(request, _('Gift "%s" marked as bought.') % gift.title)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
 
 @login_required
 def revoke(request, userid, giftid):
@@ -69,6 +75,7 @@ def revoke(request, userid, giftid):
     msg_ok(request, _('Gift "%s" no longer marked as bought.') % gift.title)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
+
 @login_required
 def delete(request, userid, giftid):
     gift = get_object_or_404(Gift, pk = int(giftid))
@@ -78,6 +85,7 @@ def delete(request, userid, giftid):
     gift.delete()
     msg_ok(request, _('Gift "%s" deleted.') % title)
     return HttpResponseRedirect('/')
+
 
 @login_required
 def edit(request, userid, giftid):
