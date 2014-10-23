@@ -19,20 +19,20 @@ def overview(request):
 
 @login_required
 def userlist(request, userid):
-    user = get_object_or_404(User, username = userid)
-    gifts = Gift.objects.filter(owner = user).order_by('-priority')
+    user = get_object_or_404(User, username=userid)
+    gifts = Gift.objects.filter(owner=user).order_by('-priority')
     return render(request, 'userlist.html', {'gifts': gifts, 'listuser': user})
 
 
 @login_required
 def buylist(request):
-    gifts = Gift.objects.filter(buyer = request.user).order_by('-priority')
+    gifts = Gift.objects.filter(buyer=request.user).order_by('-priority')
     return render(request, 'buylist.html', {'gifts': gifts, 'show_user': True})
 
 
 @login_required
 def gift(request, userid, giftid):
-    gift = get_object_or_404(Gift, pk = int(giftid))
+    gift = get_object_or_404(Gift, pk=int(giftid))
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     return render(request, 'gift.html', {'gift': gift})
@@ -40,24 +40,29 @@ def gift(request, userid, giftid):
 
 @login_required
 def create(request):
-    if request.method == 'POST': # If the form has been submitted...
-        form = NewGift(request.POST) # A form bound to the POST data
-        if form.is_valid(): # All validation rules pass
+    # If the form has been submitted...
+    if request.method == 'POST':
+        # A form bound to the POST data
+        form = NewGift(request.POST)
+        if form.is_valid():
+            # All validation rules pass
             gift = form.save(commit=False)
             gift.owner = request.user
             gift.save()
             messages.success(request, _('Gift "%s" created.') % gift.title)
-            return redirect('/%s/' % request.user.username) # Redirect after POST
+            # Redirect after POST
+            return redirect('/%s/' % request.user.username)
         messages.error(request, _('Gift not created!'))
     else:
-        form = NewGift() # An unbound form
+        # An unbound form
+        form = NewGift()
 
-    return render_to_response('create.html', RequestContext(request,{'form': form }))
+    return render(request, 'create.html', {'form': form})
 
 
 @login_required
 def buy(request, userid, giftid):
-    gift = get_object_or_404(Gift, pk = int(giftid))
+    gift = get_object_or_404(Gift, pk=int(giftid))
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     gift.buy(request.user)
@@ -67,17 +72,19 @@ def buy(request, userid, giftid):
 
 @login_required
 def revoke(request, userid, giftid):
-    gift = get_object_or_404(Gift, pk = int(giftid))
+    gift = get_object_or_404(Gift, pk=int(giftid))
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     gift.revoke()
-    messages.success(request, _('Gift "%s" no longer marked as bought.') % gift.title)
+    messages.success(
+        request, _('Gift "%s" no longer marked as bought.') % gift.title
+    )
     return redirect(request.META.get('HTTP_REFERER', '/'))
 
 
 @login_required
 def delete(request, userid, giftid):
-    gift = get_object_or_404(Gift, pk = int(giftid))
+    gift = get_object_or_404(Gift, pk=int(giftid))
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     title = gift.title
@@ -88,17 +95,22 @@ def delete(request, userid, giftid):
 
 @login_required
 def edit(request, userid, giftid):
-    gift = get_object_or_404(Gift, pk = int(giftid))
+    gift = get_object_or_404(Gift, pk=int(giftid))
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
-    if request.method == 'POST': # If the form has been submitted...
-        form = NewGift(request.POST, instance = gift) # A form bound to the POST data
-        if form.is_valid(): # All validation rules pass
+    # If the form has been submitted...
+    if request.method == 'POST':
+        # A form bound to the POST data
+        form = NewGift(request.POST, instance=gift)
+        if form.is_valid():
+            # All validation rules pass
             form.save()
             messages.success(request, _('Gift "%s" updated.') % gift.title)
-            return redirect('/%s/' % request.user.username) # Redirect after POST
+            # Redirect after POST
+            return redirect('/%s/' % request.user.username)
         messages.error(request, _('Gift not updated!'))
     else:
-        form = NewGift(instance = gift) # An unbound form
+        # An unbound form
+        form = NewGift(instance=gift)
 
-    return render(request, 'edit.html', {'form': form, 'gift': gift })
+    return render(request, 'edit.html', {'form': form, 'gift': gift})
