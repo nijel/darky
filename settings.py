@@ -150,6 +150,6 @@ LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/'
 
-EMAIL_SUBJECT_PREFIX = '[darky.cihar.com] '
+EMAIL_SUBJECT_PREFIX = '[darky] '
 
-ALLOWED_HOSTS = ['darky.cihar.com']
+ALLOWED_HOSTS = ['darky', 'localhost', '127.0.0.1']
