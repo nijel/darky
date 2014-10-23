@@ -2,219 +2,213 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Michal Čihař <michal@cihar.com>, 2009.
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Dárky 1.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-23 11:05+0200\n"
-"PO-Revision-Date: 2009-12-02 20:52+0100\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
-"Language-Team: Czech <cs@li.org>\n"
-"Language: cs\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: html/base.html:6 html/base.html.py:22
 msgid "Gifts"
-msgstr "Dárky"
+msgstr ""
 
 #: html/base.html:6 html/base.html.py:12
 msgid "Overview"
-msgstr "Přehled"
+msgstr ""
 
 #: html/base.html:13
 msgid "Own"
-msgstr "Vlastní"
+msgstr ""
 
 #: html/base.html:14
 msgid "Buying"
-msgstr "Kupuji"
+msgstr ""
 
 #: html/base.html:15 html/create.html:17
 msgid "Create"
-msgstr "Vytvořit"
+msgstr ""
 
 #: html/base.html:19
 msgid "Logout"
-msgstr "Odhlásit"
+msgstr ""
 
 #: html/buylist.html:5 html/buylist.html.py:9
 msgid "Gifts to buy"
-msgstr "Dárky které kupuji"
+msgstr ""
 
 #: html/create.html:5 html/create.html.py:9
 msgid "Create new gift"
-msgstr "Vytvořit nový dárek"
+msgstr ""
 
 #: html/edit.html:5 html/edit.html.py:9
 msgid "Edit gift"
-msgstr "Upravit dárek"
+msgstr ""
 
 #: html/edit.html:17
 msgid "Save"
-msgstr "Uložit"
+msgstr ""
 
 #: html/gift.html:12
 msgid "You are currently marked as buyer of this gift."
-msgstr "Jsi označen jako dárce tohoto dárku."
+msgstr ""
 
 #: html/gift.html:15
 msgid "This item is marked as bought."
-msgstr "Tato položka je označená jako koupená."
+msgstr ""
 
 #: html/gift.html:19
 msgid "Gift for:"
-msgstr "Dárek pro:"
+msgstr ""
 
 #: html/gift.html:20
 msgid "Priority:"
-msgstr "Priorita:"
+msgstr ""
 
 #: html/gift.html:23
 msgid "Estimated price:"
-msgstr "Odhadovaná cena:"
+msgstr ""
 
 #: html/gift.html:27
 msgid "More details:"
-msgstr "Více podrobností:"
+msgstr ""
 
 #: html/gift.html:32
 msgid "Actions:"
-msgstr "Akce:"
+msgstr ""
 
 #: html/gift.html:35 html/list.html:26
 msgid "Edit"
-msgstr "Upravit"
+msgstr ""
 
 #: html/gift.html:36 html/list.html:27
 msgid "Delete"
-msgstr "Odstranit"
+msgstr ""
 
 #: html/gift.html:40 html/list.html:31
 msgid "Buy"
-msgstr "Koupit"
+msgstr ""
 
 #: html/gift.html:44 html/list.html:35
 msgid "Revoke"
-msgstr "Vrátit"
+msgstr ""
 
 #: html/list.html:7
 msgid "User"
-msgstr "Uživatel"
+msgstr ""
 
 #: html/list.html:9 wishlist/models.py:20
 msgid "Title"
-msgstr "Název"
+msgstr ""
 
 #: html/list.html:10
 msgid "Price"
-msgstr "Cena"
+msgstr ""
 
 #: html/list.html:11 wishlist/models.py:31
 msgid "Priority"
-msgstr "Priorita"
+msgstr ""
 
 #: html/list.html:12
 msgid "Actions"
-msgstr "Akce"
+msgstr ""
 
 #: html/list.html:22
 msgid "Not defined"
-msgstr "Nezadáno"
+msgstr ""
 
 #: html/registration/logged_out.html:5
 msgid "Logged out"
-msgstr "Odhlášen"
+msgstr ""
 
 #: html/registration/logged_out.html:9
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
 msgstr ""
-"Byl jsi odhlášen, pro opětovné přihášení klikni <a href=\"/login/\">zde</a>."
 
 #: html/registration/login.html:5 html/registration/login.html.py:8
 #: html/registration/login.html:21
 msgid "Login"
-msgstr "Přihlášení"
+msgstr ""
 
 #: html/registration/login.html:11
 msgid "Your username and password didn't match. Please try again."
-msgstr "Chybné uživatelské jméno a heslo. Prosím zkus to znovu."
+msgstr ""
 
 #: wishlist/models.py:10
 msgid "Very low"
-msgstr "Velmi nízká"
+msgstr ""
 
 #: wishlist/models.py:11
 msgid "Low"
-msgstr "Nízká"
+msgstr ""
 
 #: wishlist/models.py:12
 msgid "Standard"
-msgstr "Normální"
+msgstr ""
 
 #: wishlist/models.py:13
 msgid "High"
-msgstr "Vysoká"
+msgstr ""
 
 #: wishlist/models.py:14
 msgid "Very high"
-msgstr "Velmi vysoká"
+msgstr ""
 
 #: wishlist/models.py:21
 msgid "Description"
-msgstr "Popis"
+msgstr ""
 
 #: wishlist/models.py:22
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">markdown</a>."
 msgstr ""
-"Můžeš použít <a href=\"http://daringfireball.net/projects/markdown/syntax"
-"\">markdown</a>."
 
 #: wishlist/models.py:29
 msgid "Link"
-msgstr "Odkaz"
+msgstr ""
 
 #: wishlist/models.py:30
 msgid "Expected price"
-msgstr "Odhadovaná cena"
+msgstr ""
 
 #: wishlist/views.py:46
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr "Dárek \"%s\" byl vytvořen."
+msgstr ""
 
 #: wishlist/views.py:48
 msgid "Gift not created!"
-msgstr "Dárek nebyl vytvořen!"
+msgstr ""
 
 #: wishlist/views.py:60
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr "Dárek \"%s\" byl označen jako koupený."
+msgstr ""
 
 #: wishlist/views.py:69
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr "Dárek \"%s\" již není označen jako koupený."
+msgstr ""
 
 #: wishlist/views.py:79
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr "Dárek \"%s\" byl odstraněn."
+msgstr ""
 
 #: wishlist/views.py:91
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr "Dárek \"%s\" byl změněn."
+msgstr ""
 
 #: wishlist/views.py:93
 msgid "Gift not updated!"
-msgstr "Dárek nebyl změněn!"
-
-#~ msgid "Description, you can use markdown."
-#~ msgstr "Popisek, můžete použít markdown."
+msgstr ""
