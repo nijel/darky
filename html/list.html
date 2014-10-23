@@ -22,7 +22,7 @@
 <td>{% if gift.price %}{{ gift.price }}{% else %}<abbr title="{% trans "Not defined" %}">-</abbr>{% endif %}</td>
 <td>{{ gift.get_priority_display }}</td>
 <td class="action">
-{% if gift.owner == user %}
+{% if gift.owner == user or gift.private %}
 <a href="{{ gift.get_edit_url }}" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> {% trans "Edit" %}</a>
 <a href="{{ gift.get_delete_url }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> {% trans "Delete" %}</a>
 {% else %}
@@ -36,6 +36,9 @@
 {% endif %}
 {% if gift.buyer and gift.buyer != user %}
 <span class="badge">{% trans "Taken" %}</span>
+{% endif %}
+{% if gift.private %}
+<span class="badge">{% trans "Private" %}</span>
 {% endif %}
 
 </td>

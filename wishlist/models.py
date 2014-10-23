@@ -22,6 +22,9 @@ class Gift(models.Model):
     buyer = models.ForeignKey(
         User, null=True, blank=True, related_name='given_set'
     )
+    private = models.BooleanField(
+        default=False
+    )
     title = models.CharField(
         ugettext_lazy('Title'), max_length=250
     )

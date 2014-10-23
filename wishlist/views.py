@@ -3,6 +3,7 @@ from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models import Q
 
 from django.contrib.auth.models import User
 
@@ -12,14 +13,19 @@ from wishlist.forms import NewGift
 
 @login_required
 def overview(request):
-    gifts = Gift.objects.all().order_by('owner', '-priority')
+    gifts = Gift.objects.filter(
+        Q(private=False) | Q(buyer=request.user)
+    ).order_by('owner', '-priority')
     return render(request, 'overview.html', {'gifts': gifts})
 
 
 @login_required
 def userlist(request, userid):
     user = get_object_or_404(User, username=userid)
-    gifts = Gift.objects.filter(owner=user).order_by('-priority')
+    gifts = Gift.objects.filter(
+        Q(private=False) | Q(buyer=request.user),
+        owner=user
+    ).order_by('-priority')
     return render(request, 'userlist.html', {'gifts': gifts, 'listuser': user})
 
 
