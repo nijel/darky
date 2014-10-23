@@ -45,6 +45,10 @@ def gift(request, userid, giftid):
 
 @login_required
 def create(request):
+    if 'for' in request.REQUEST:
+        foruser = User.objects.get(username=request.REQUEST['for'])
+    else:
+        foruser = None
     # If the form has been submitted...
     if request.method == 'POST':
         # A form bound to the POST data
@@ -52,7 +56,12 @@ def create(request):
         if form.is_valid():
             # All validation rules pass
             obj = form.save(commit=False)
-            obj.owner = request.user
+            if foruser:
+                obj.private = True
+                obj.buyer = request.user
+                obj.owner = foruser
+            else:
+                obj.owner = request.user
             obj.save()
             messages.success(request, _('Gift "%s" created.') % obj.title)
             # Redirect after POST
@@ -62,7 +71,11 @@ def create(request):
         # An unbound form
         form = NewGift()
 
-    return render(request, 'create.html', {'form': form})
+    return render(
+        request,
+        'create.html',
+        {'form': form, 'foruser': foruser}
+    )
 
 
 @login_required

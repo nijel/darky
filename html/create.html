@@ -2,22 +2,43 @@
 
 {% load i18n %}
 {% load crispy_forms_tags %}
+{% load messages %}
 
-{% block title %}{% trans "Create new gift" %}{% endblock %}
+{% block title %}
+{% if foruser %}
+{% blocktrans with foruser.get_full_name as name %}Create new gift for {{ name }}{% endblocktrans %}
+{% else %}
+{% trans "Create new gift" %}
+{% endif %}
+{% endblock %}
 
 {% block content %}
 
+{% show_message "info" _("You are adding gift for somebody else. It will be visible for you only so that you can remember it.") %}
+
 <form method="POST" action=".">
 {% csrf_token %}
+<input type="hidden" name="for" value="{{ foruser.username }}" />
 
 <div class="panel panel-primary">
-<div class="panel-heading">{% trans "Create new gift" %}</div>
+<div class="panel-heading">
+{% if foruser %}
+{% blocktrans with foruser.get_full_name as name %}Create new gift for {{ name }}{% endblocktrans %}
+{% else %}
+{% trans "Create new gift" %}
+{% endif %}
+</div>
 
 <div class="panel-body">
 {{ form|crispy }}
 </div>
 
 <div class="panel-footer">
+{% if foruser %}
+<p class="helptext pull-right">
+{% blocktrans with foruser.get_full_name as name %}You are creating gift for {{ name }}.{% endblocktrans %}
+</p>
+{% endif %}
 <input type="submit" value="{% trans "Create" %}" class="btn btn-default" />
 </div>
 </div>
