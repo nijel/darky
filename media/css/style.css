@@ -1,0 +1,9 @@
+.content {
+    margin: 12px;
+}
+.panel-list .panel-body {
+    padding: 0;
+}
+.panel-list .table {
+    margin: 0;
+}

@@ -1,27 +1,31 @@
 {% extends "base.html" %}
 
 {% load i18n %}
+{% load crispy_forms_tags %}
+{% load messages %}
 
 {% block title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
-<h2>{% trans "Login" %}</h2>
 
 {% if form.errors %}
-<p>{% trans "Your username and password didn't match. Please try again." %}</p>
+{% show_message "danger" _("Your username and password didn't match. Please try again.") %}
 {% endif %}
 
 <form method="post" action=".">
 {% csrf_token %}
-<table>
-{{ form.as_table }}
-
-<tr>
-<td></td>
-<td><input type="submit" value="{% trans "Login" %}" /></td>
-</tr>
-</table>
 <input type="hidden" name="next" value="{{ next }}" />
+<div class="panel panel-primary">
+<div class="panel-heading">{% trans "Login" %}</div>
+
+<div class="panel-body">
+{{ form|crispy }}
+</div>
+
+<div class="panel-footer">
+<input type="submit" value="{% trans "Login" %}" class="btn btn-default" />
+</div>
+</div>
 </form>
 
 {% endblock %}

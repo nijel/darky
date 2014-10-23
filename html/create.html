@@ -1,22 +1,26 @@
 {% extends "base.html" %}
 
 {% load i18n %}
+{% load crispy_forms_tags %}
 
 {% block title %}{% trans "Create new gift" %}{% endblock %}
 
 {% block content %}
 
-<h2>{% trans "Create new gift" %}</h2>
-
 <form method="POST" action=".">
 {% csrf_token %}
-<table>
-{{ form.as_table }}
-<tr>
-<td></td>
-<td><input type="submit" value="{% trans "Create" %}" /></td>
-</tr>
-</table>
+
+<div class="panel panel-primary">
+<div class="panel-heading">{% trans "Create new gift" %}</div>
+
+<div class="panel-body">
+{{ form|crispy }}
+</div>
+
+<div class="panel-footer">
+<input type="submit" value="{% trans "Create" %}" class="btn btn-default" />
+</div>
+</div>
 </form>
 
 {% endblock %}

@@ -7,11 +7,16 @@
 {% regroup gifts by owner as gift_list %}
 
 {% for gift in gift_list %}
-<h2><a href="/{{ gift.grouper }}/">{{ gift.grouper.get_full_name }}</a></h2>
+<div class="panel panel-default panel-list">
+<div class="panel-heading"><h4><a href="/{{ gift.grouper }}/">{{ gift.grouper.get_full_name }}</a></h4></div>
+<div class="panel-body">
 
 {% with gift.list as gifts %}
 {% include "list.html" %}
 {% endwith %}
+
+</div>
+</div>
 
 {% endfor %}
 

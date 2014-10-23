@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<table>
+<table class="table table-striped"> 
 <thead>
 <tr>
 {% if show_user %}
@@ -14,7 +14,7 @@
 </thead>
 <tbody>
 {% for gift in gifts %}
-<tr class="{% ifequal gift.buyer user %}buyer{% else %}{% if gift.buyer %}bought{% endif %}{% endifequal %}">
+<tr class="{% ifequal gift.buyer user %}info{% else %}{% if gift.buyer %}warning{% endif %}{% endifequal %}">
 {% if show_user %}
 <td><a href="/{{ gift.owner.username }}/">{{ gift.owner.get_full_name }}</a></td>
 {% endif %}
@@ -23,16 +23,16 @@
 <td>{{ gift.get_priority_display }}</td>
 <td class="action">
 {% ifequal gift.owner user %}
-<a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a>
-<a href="{{ gift.get_delete_url }}">{% trans "Delete" %}</a>
+<a href="{{ gift.get_edit_url }}" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> {% trans "Edit" %}</a>
+<a href="{{ gift.get_delete_url }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> {% trans "Delete" %}</a>
 {% else %}
 {% if gift.buyer %}
 {% else %}
-<a href="{{ gift.get_buy_url }}">{% trans "Buy" %}</a>
+<a href="{{ gift.get_buy_url }}" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span> {% trans "Buy" %}</a>
 {% endif %}
 {% endifequal %}
 {% ifequal gift.buyer user %}
-<a href="{{ gift.get_revoke_url }}">{% trans "Revoke" %}</a>
+<a href="{{ gift.get_revoke_url }}" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> {% trans "Revoke" %}</a>
 {% endifequal %}
 </td>
 </tr>
