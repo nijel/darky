@@ -151,7 +151,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.csrf',
     'django.contrib.messages.context_processors.messages',
-    )
+    'wishlist.context_processors.wishlist_context',
+)
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
