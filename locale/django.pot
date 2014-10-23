@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-23 12:41+0200\n"
+"POT-Creation-Date: 2014-10-23 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,11 +37,15 @@ msgstr ""
 msgid "Buying"
 msgstr ""
 
-#: html/base.html:38 html/create.html:21
+#: html/base.html:38 html/create.html:21 html/list-add-own.html:4
 msgid "Create"
 msgstr ""
 
-#: html/base.html:46
+#: html/base.html:40
+msgid "Wishlists"
+msgstr ""
+
+#: html/base.html:54
 msgid "Logout"
 msgstr ""
 
@@ -53,11 +57,11 @@ msgstr ""
 msgid "Create new gift"
 msgstr ""
 
-#: html/edit.html:5 html/edit.html.py:9
+#: html/edit.html:6 html/edit.html.py:14
 msgid "Edit gift"
 msgstr ""
 
-#: html/edit.html:17
+#: html/edit.html:21
 msgid "Save"
 msgstr ""
 
@@ -109,7 +113,7 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: html/list.html:9 wishlist/models.py:21
+#: html/list.html:9 wishlist/models.py:26
 msgid "Title"
 msgstr ""
 
@@ -117,7 +121,7 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: html/list.html:11 wishlist/models.py:32
+#: html/list.html:11 wishlist/models.py:47
 msgid "Priority"
 msgstr ""
 
@@ -129,7 +133,7 @@ msgstr ""
 msgid "Not defined"
 msgstr ""
 
-#: html/list.html:35
+#: html/list.html:38
 msgid "Taken"
 msgstr ""
 
@@ -170,53 +174,53 @@ msgstr ""
 msgid "Very high"
 msgstr ""
 
-#: wishlist/models.py:22
+#: wishlist/models.py:29
 msgid "Description"
 msgstr ""
 
-#: wishlist/models.py:23
+#: wishlist/models.py:31
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">markdown</a>."
 msgstr ""
 
-#: wishlist/models.py:30
+#: wishlist/models.py:41
 msgid "Link"
 msgstr ""
 
-#: wishlist/models.py:31
+#: wishlist/models.py:44
 msgid "Expected price"
 msgstr ""
 
-#: wishlist/views.py:50
+#: wishlist/views.py:51
 #, python-format
 msgid "Gift \"%s\" created."
 msgstr ""
 
-#: wishlist/views.py:52
+#: wishlist/views.py:54
 msgid "Gift not created!"
 msgstr ""
 
-#: wishlist/views.py:65
+#: wishlist/views.py:68
 #, python-format
 msgid "Gift \"%s\" marked as bought."
 msgstr ""
 
-#: wishlist/views.py:75
+#: wishlist/views.py:79
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
 msgstr ""
 
-#: wishlist/views.py:86
+#: wishlist/views.py:91
 #, python-format
 msgid "Gift \"%s\" deleted."
 msgstr ""
 
-#: wishlist/views.py:99
+#: wishlist/views.py:107
 #, python-format
 msgid "Gift \"%s\" updated."
 msgstr ""
 
-#: wishlist/views.py:101
+#: wishlist/views.py:110
 msgid "Gift not updated!"
 msgstr ""
