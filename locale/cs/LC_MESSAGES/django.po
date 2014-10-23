@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-23 13:31+0200\n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
 "PO-Revision-Date: 2014-10-23 13:32+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
@@ -38,9 +38,9 @@ msgstr "Vlastní"
 msgid "Buying"
 msgstr "Kupuji"
 
-#: html/base.html:38 html/create.html:21 html/list-add-own.html:4
-msgid "Create"
-msgstr "Vytvořit"
+#: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
+msgid "Add"
+msgstr ""
 
 #: html/base.html:40
 msgid "Wishlists"
@@ -54,9 +54,30 @@ msgstr "Odhlásit"
 msgid "Gifts to buy"
 msgstr "Dárky které kupuji"
 
-#: html/create.html:6 html/create.html.py:14
+#: html/create.html:9 html/create.html.py:26
+#, fuzzy, python-format
+#| msgid "Create new gift"
+msgid "Create new gift for %(name)s"
+msgstr "Vytvořit nový dárek"
+
+#: html/create.html:11 html/create.html.py:28
 msgid "Create new gift"
 msgstr "Vytvořit nový dárek"
+
+#: html/create.html:17
+msgid ""
+"You are adding gift for somebody else. It will be visible for you only so "
+"that you can remember it."
+msgstr ""
+
+#: html/create.html:39
+#, python-format
+msgid "You are creating gift for %(name)s."
+msgstr ""
+
+#: html/create.html:42
+msgid "Create"
+msgstr "Vytvořit"
 
 #: html/edit.html:6 html/edit.html.py:14
 msgid "Edit gift"
@@ -110,11 +131,15 @@ msgstr "Koupit"
 msgid "Revoke"
 msgstr "Vrátit"
 
+#: html/list-add.html:4
+msgid "You can add here gifts you want to buy to this person."
+msgstr ""
+
 #: html/list.html:7
 msgid "User"
 msgstr "Uživatel"
 
-#: html/list.html:9 wishlist/models.py:26
+#: html/list.html:9 wishlist/models.py:29
 msgid "Title"
 msgstr "Název"
 
@@ -122,7 +147,7 @@ msgstr "Název"
 msgid "Price"
 msgstr "Cena"
 
-#: html/list.html:11 wishlist/models.py:47
+#: html/list.html:11 wishlist/models.py:50
 msgid "Priority"
 msgstr "Priorita"
 
@@ -137,6 +162,10 @@ msgstr "Nezadáno"
 #: html/list.html:38
 msgid "Taken"
 msgstr "Zabráno"
+
+#: html/list.html:41
+msgid "Private"
+msgstr ""
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
@@ -176,11 +205,11 @@ msgstr "Vysoká"
 msgid "Very high"
 msgstr "Velmi vysoká"
 
-#: wishlist/models.py:29
+#: wishlist/models.py:32
 msgid "Description"
 msgstr "Popis"
 
-#: wishlist/models.py:31
+#: wishlist/models.py:34
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">markdown</a>."
@@ -188,44 +217,44 @@ msgstr ""
 "Můžeš použít <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">markdown</a>."
 
-#: wishlist/models.py:41
+#: wishlist/models.py:44
 msgid "Link"
 msgstr "Odkaz"
 
-#: wishlist/models.py:44
+#: wishlist/models.py:47
 msgid "Expected price"
 msgstr "Odhadovaná cena"
 
-#: wishlist/views.py:51
+#: wishlist/views.py:66
 #, python-format
 msgid "Gift \"%s\" created."
 msgstr "Dárek \"%s\" byl vytvořen."
 
-#: wishlist/views.py:54
+#: wishlist/views.py:69
 msgid "Gift not created!"
 msgstr "Dárek nebyl vytvořen!"
 
-#: wishlist/views.py:68
+#: wishlist/views.py:87
 #, python-format
 msgid "Gift \"%s\" marked as bought."
 msgstr "Dárek \"%s\" byl označen jako koupený."
 
-#: wishlist/views.py:79
+#: wishlist/views.py:98
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
 msgstr "Dárek \"%s\" již není označen jako koupený."
 
-#: wishlist/views.py:91
+#: wishlist/views.py:110
 #, python-format
 msgid "Gift \"%s\" deleted."
 msgstr "Dárek \"%s\" byl odstraněn."
 
-#: wishlist/views.py:107
+#: wishlist/views.py:126
 #, python-format
 msgid "Gift \"%s\" updated."
 msgstr "Dárek \"%s\" byl změněn."
 
-#: wishlist/views.py:110
+#: wishlist/views.py:129
 msgid "Gift not updated!"
 msgstr "Dárek nebyl změněn!"
 
