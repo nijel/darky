@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -22,8 +23,11 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 
     # Static media for development
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': './media'}),
+    url(
+        r'^media/(?P<path>.*)$',
+        'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT}
+    ),
 
     # Need to be last to avoid conflicts on userid
     (r'^(?P<userid>[^/]*)/$', 'wishlist.views.userlist'),
