@@ -3,13 +3,12 @@ from django.http import Http404, HttpResponseRedirect
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from django.contrib.auth.models import User
 
 from wishlist.models import Gift
 from wishlist.forms import NewGift
-
-from wishlist.messages import msg_ok, msg_err
 
 
 @login_required
@@ -47,9 +46,9 @@ def create(request):
             gift = form.save(commit=False)
             gift.owner = request.user
             gift.save()
-            msg_ok(request, _('Gift "%s" created.') % gift.title)
+            messages.success(request, _('Gift "%s" created.') % gift.title)
             return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
-        msg_err(request, _('Gift not created!'))
+        messages.error(request, _('Gift not created!'))
     else:
         form = NewGift() # An unbound form
 
@@ -62,7 +61,7 @@ def buy(request, userid, giftid):
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     gift.buy(request.user)
-    msg_ok(request, _('Gift "%s" marked as bought.') % gift.title)
+    messages.success(request, _('Gift "%s" marked as bought.') % gift.title)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
@@ -72,7 +71,7 @@ def revoke(request, userid, giftid):
     if gift.owner.username != userid:
         raise Http404('User on gift do not match!')
     gift.revoke()
-    msg_ok(request, _('Gift "%s" no longer marked as bought.') % gift.title)
+    messages.success(request, _('Gift "%s" no longer marked as bought.') % gift.title)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
@@ -83,7 +82,7 @@ def delete(request, userid, giftid):
         raise Http404('User on gift do not match!')
     title = gift.title
     gift.delete()
-    msg_ok(request, _('Gift "%s" deleted.') % title)
+    messages.success(request, _('Gift "%s" deleted.') % title)
     return HttpResponseRedirect('/')
 
 
@@ -96,9 +95,9 @@ def edit(request, userid, giftid):
         form = NewGift(request.POST, instance = gift) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
             form.save()
-            msg_ok(request, _('Gift "%s" updated.') % gift.title)
+            messages.success(request, _('Gift "%s" updated.') % gift.title)
             return HttpResponseRedirect('/%s/' % request.user.username) # Redirect after POST
-        msg_err(request, _('Gift not updated!'))
+        messages.error(request, _('Gift not updated!'))
     else:
         form = NewGift(instance = gift) # An unbound form
 
