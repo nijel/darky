@@ -19,19 +19,21 @@
 {% endif %}
 {% endifequal %}
 
-<p><strong>{% trans "Gift for:" %}</strong> {{ gift.owner.get_full_name }}</p>
-<p><strong>{% trans "Priority:" %}</strong> {{ gift.get_priority_display }}</p>
+<table class="table">
+<tr><th>{% trans "Gift for:" %}</th><td>{{ gift.owner.get_full_name }}</td></tr>
+<tr><th>{% trans "Priority:" %}</th><td>{{ gift.get_priority_display }}</td></tr>
 
 {% if gift.price %}
-<p><strong>{% trans "Estimated price:" %}</strong> {{ gift.price }}</p>
+<tr><th>{% trans "Estimated price:" %}</th><td>{{ gift.price }}</td></tr>
 {% endif %}
 
 {% if gift.url %}
-<p><strong>{% trans "More details:" %}</strong> <a href="{{ gift.url }}">{{ gift.url }}</a></p>
+<tr><th>{% trans "More details:" %}</th><td><a href="{{ gift.url }}">{{ gift.url }}</a></td></tr>
 {% endif %}
-
+<tr><td colspan="2">
 {{ gift.description_html|safe }}
-
+</td></tr>
+</table>
 </div>
 <div class="panel-footer">
 {% include "gift-actions.html" %}
