@@ -18,7 +18,17 @@
 {% if show_user %}
 <td><a href="/{{ gift.owner.username }}/">{{ gift.owner.get_full_name }}</a></td>
 {% endif %}
-<td><a href="{{ gift.get_absolute_url }}">{{ gift.title }}</a></td>
+<td>
+{% if gift.buyer and gift.buyer != user %}
+<span class="badge pull-right">{% trans "Taken" %}</span>
+{% endif %}
+{% if gift.private %}
+<span class="badge pull-right">{% trans "Private" %}</span>
+{% elif gift.buyer and gift.buyer == user %}
+<span class="badge pull-right">{% trans "Buying" %}</span>
+{% endif %}
+<a href="{{ gift.get_absolute_url }}">{{ gift.title }}</a>
+</td>
 <td>{% if gift.price %}{{ gift.price }}{% else %}<abbr title="{% trans "Not defined" %}">-</abbr>{% endif %}</td>
 <td><abbr title="{{ gift.get_priority_display }}">
 {% if gift.priority == 1 %}
@@ -47,12 +57,6 @@
 <a href="{{ gift.get_revoke_url }}" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> {% trans "Revoke" %}</a>
 {% endif %}
 {% endif %}
-{% endif %}
-{% if gift.buyer and gift.buyer != user %}
-<span class="badge">{% trans "Taken" %}</span>
-{% endif %}
-{% if gift.private %}
-<span class="badge">{% trans "Private" %}</span>
 {% endif %}
 
 </td>
