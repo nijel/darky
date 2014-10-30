@@ -6,7 +6,9 @@
 
 {% block content %}
 
-<h2>{{ gift.title }}</h2>
+<div class="panel panel-default panel-list">
+<div class="panel-heading"><h4>{{ gift.title }}</h4></div>
+<div class="panel-body">
 
 {% ifequal gift.buyer user %}
 <p>{% trans "You are currently marked as buyer of this gift." %}</p>
@@ -29,19 +31,9 @@
 
 {{ gift.description_html|safe }}
 
-<p><strong>{% trans "Actions:" %}</strong></p>
-<ul>
-{% ifequal gift.owner user %}
-<li><a href="{{ gift.get_edit_url }}">{% trans "Edit" %}</a></li>
-<li><a href="{{ gift.get_delete_url }}">{% trans "Delete" %}</a></li>
-{% else %}
-{% if gift.buyer %}
-{% else %}
-<li><a href="{{ gift.get_buy_url }}">{% trans "Buy" %}</a></li>
-{% endif %}
-{% endifequal %}
-{% ifequal gift.buyer user %}
-<li><a href="{{ gift.get_revoke_url }}">{% trans "Revoke" %}</a></li>
-{% endifequal %}
-</ul>
+</div>
+<div class="panel-footer">
+{% include "gift-actions.html" %}
+</div>
+</div>
 {% endblock %}

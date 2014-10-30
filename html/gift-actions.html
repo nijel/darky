@@ -1,0 +1,14 @@
+{% load i18n %}
+
+{% if gift.owner == user or gift.private %}
+<a href="{{ gift.get_edit_url }}" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> {% trans "Edit" %}</a>
+<a href="{{ gift.get_delete_url }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> {% trans "Delete" %}</a>
+{% else %}
+{% if not gift.buyer %}
+<a href="{{ gift.get_buy_url }}" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span> {% trans "Buy" %}</a>
+{% else %}
+{% if gift.buyer == user %}
+<a href="{{ gift.get_revoke_url }}" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> {% trans "Revoke" %}</a>
+{% endif %}
+{% endif %}
+{% endif %}
