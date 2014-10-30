@@ -1,20 +1,21 @@
 {% extends "base.html" %}
 
+{% load messages %}
 {% load i18n %}
 
 {% block title %}{{ gift.title }}{% endblock %}
 
 {% block content %}
 
-<div class="panel panel-default panel-list">
+<div class="panel panel-default">
 <div class="panel-heading"><h4>{{ gift.title }}</h4></div>
 <div class="panel-body">
 
 {% ifequal gift.buyer user %}
-<p>{% trans "You are currently marked as buyer of this gift." %}</p>
+{% show_message "info" _("You are currently marked as buyer of this gift.") %}
 {% else %}
 {% if gift.buyer %}
-<p>{% trans "This item is marked as bought." %}</p>
+{% show_message "info" _("This item is marked as bought.") %}
 {% endif %}
 {% endifequal %}
 
