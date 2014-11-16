@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-03 13:42+0100\n"
-"PO-Revision-Date: 2014-10-23 14:55+0200\n"
+"PO-Revision-Date: 2014-11-16 20:58+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.0-dev\n"
+"X-Generator: Weblate 2.1-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -229,7 +229,7 @@ msgstr "Odhadovaná cena"
 #: wishlist/views.py:66
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr "Dárek \"%s\" byl vytvořen."
+msgstr "Dárek „%s“ byl vytvořen."
 
 #: wishlist/views.py:69
 msgid "Gift not created!"
@@ -238,22 +238,22 @@ msgstr "Dárek nebyl vytvořen!"
 #: wishlist/views.py:87
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr "Dárek \"%s\" byl označen jako koupený."
+msgstr "Dárek „%s“ byl označen jako koupený."
 
 #: wishlist/views.py:98
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr "Dárek \"%s\" již není označen jako koupený."
+msgstr "Dárek „%s“ již není označen jako koupený."
 
 #: wishlist/views.py:110
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr "Dárek \"%s\" byl odstraněn."
+msgstr "Dárek „%s“ byl odstraněn."
 
 #: wishlist/views.py:126
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr "Dárek \"%s\" byl změněn."
+msgstr "Dárek „%s“ byl změněn."
 
 #: wishlist/views.py:129
 msgid "Gift not updated!"
