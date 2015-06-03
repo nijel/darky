@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-03 14:16+0200\n"
-"PO-Revision-Date: 2014-11-16 20:58+0200\n"
+"PO-Revision-Date: 2015-06-03 14:18+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.1-dev\n"
+"X-Generator: Weblate 2.3-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -149,7 +149,6 @@ msgid "Priority"
 msgstr "Priorita"
 
 #: html/list.html:11
-#, fuzzy
 msgctxt "Shortcut for priority"
 msgid "P"
 msgstr "P"
