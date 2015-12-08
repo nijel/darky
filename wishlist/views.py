@@ -47,6 +47,8 @@ def gift(request, userid, giftid):
 def create(request):
     if 'for' in request.GET and request.GET['for']:
         foruser = User.objects.get(username=request.GET['for'])
+    elif 'for' in request.POST and request.POST['for']:
+        foruser = User.objects.get(username=request.POST['for'])
     else:
         foruser = None
     # If the form has been submitted...
