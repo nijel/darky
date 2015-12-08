@@ -45,8 +45,8 @@ def gift(request, userid, giftid):
 
 @login_required
 def create(request):
-    if 'for' in request.REQUEST and request.REQUEST['for']:
-        foruser = User.objects.get(username=request.REQUEST['for'])
+    if 'for' in request.GET and request.GET['for']:
+        foruser = User.objects.get(username=request.GET['for'])
     else:
         foruser = None
     # If the form has been submitted...
