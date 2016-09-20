@@ -166,6 +166,3 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Render forms using bootstrap
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
-# Custom exception reporter to include some details
-DEFAULT_EXCEPTION_REPORTER_FILTER = 'wishlist.debug.ExceptionReporterFilter'
