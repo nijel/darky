@@ -58,24 +58,24 @@ class Gift(models.Model):
         super(Gift, self).save(*args, **kwargs)
 
     @models.permalink
-    def get_absolute_url(self):
+    def get_absolute_url(self, part='gift'):
         return (
-            'wishlist.views.gift',
+            part,
             (),
             {'giftid': self.id, 'userid': self.owner.username}
         )
 
     def get_delete_url(self):
-        return '%sdelete/' % self.get_absolute_url()
+        return self.get_absolute_url('delete')
 
     def get_edit_url(self):
-        return '%sedit/' % self.get_absolute_url()
+        return self.get_absolute_url('edit')
 
     def get_buy_url(self):
-        return '%sbuy/' % self.get_absolute_url()
+        return self.get_absolute_url('buy')
 
     def get_revoke_url(self):
-        return '%srevoke/' % self.get_absolute_url()
+        return self.get_absolute_url('revoke')
 
     def buy(self, user):
         self.buyer = user
