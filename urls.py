@@ -36,9 +36,29 @@ urlpatterns = [
 
     # Need to be last to avoid conflicts on userid
     url(r'^(?P<userid>[^/]*)/$', wishlist.views.userlist),
-    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/$', wishlist.views.gift, name='gift'),
-    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$', wishlist.views.buy, name='buy'),
-    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$', wishlist.views.revoke, name='revoke'),
-    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$', wishlist.views.edit, name='edit'),
-    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$', wishlist.views.delete, name='delete'),
+    url(
+        r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/$',
+        wishlist.views.gift,
+        name='gift'
+    ),
+    url(
+        r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$',
+        wishlist.views.buy,
+        name='buy'
+    ),
+    url(
+        r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$',
+        wishlist.views.revoke,
+        name='revoke'
+    ),
+    url(
+        r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$',
+        wishlist.views.edit,
+        name='edit'
+        ),
+    url(
+        r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$',
+        wishlist.views.delete,
+        name='delete'
+    ),
 ]
