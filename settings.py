@@ -4,7 +4,6 @@
 import os
 
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -101,11 +100,30 @@ STATICFILES_FINDERS = (
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'w#1sw9ifcn+0)4@)$j=^&02y&nc2$+7@u3&ax18ebq#nznc8@a'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR, 'html'),
+        ],
+        'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.core.context_processors.debug',
+                'django.core.context_processors.i18n',
+                'django.core.context_processors.media',
+                'django.core.context_processors.request',
+                'django.core.context_processors.csrf',
+                'django.contrib.messages.context_processors.messages',
+                'wishlist.context_processors.wishlist_context',
+            ],
+            'loaders': [
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ],
+        },
+    },
+]
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -118,14 +136,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'urls'
-
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates"
-    # or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, 'html'),
-)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -142,16 +152,6 @@ INSTALLED_APPS = (
 
 
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'), )
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.request',
-    'django.core.context_processors.csrf',
-    'django.contrib.messages.context_processors.messages',
-    'wishlist.context_processors.wishlist_context',
-)
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
