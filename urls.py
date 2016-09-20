@@ -1,40 +1,44 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+import django.contrib.auth.views
+import django.views.static
+
+import wishlist.views
+
 admin.autodiscover()
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     # Example:
     # (r'^darky/', include('darky.foo.urls')),
-    (r'^$', 'wishlist.views.overview'),
-    (r'^create/$', 'wishlist.views.create'),
-    (r'^buy/$', 'wishlist.views.buylist'),
+    url(r'^$', wishlist.views.overview),
+    url(r'^create/$', wishlist.views.create),
+    url(r'^buy/$', wishlist.views.buylist),
 
-    (r'^login/$', 'django.contrib.auth.views.login'),
-    (r'^logout/$', 'django.contrib.auth.views.logout'),
+    url(r'^login/$', django.contrib.auth.views.login),
+    url(r'^logout/$', django.contrib.auth.views.logout),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    (r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 
     # Static media for development
     url(
         r'^media/(?P<path>.*)$',
-        'django.views.static.serve',
+        django.views.static.serve,
         {'document_root': settings.MEDIA_ROOT}
     ),
 
     # Need to be last to avoid conflicts on userid
-    (r'^(?P<userid>[^/]*)/$', 'wishlist.views.userlist'),
-    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/$', 'wishlist.views.gift'),
-    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$', 'wishlist.views.buy'),
-    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$', 'wishlist.views.revoke'),
-    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$', 'wishlist.views.edit'),
-    (r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$', 'wishlist.views.delete'),
-)
+    url(r'^(?P<userid>[^/]*)/$', wishlist.views.userlist),
+    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/$', wishlist.views.gift),
+    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$', wishlist.views.buy),
+    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$', wishlist.views.revoke),
+    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$', wishlist.views.edit),
+    url(r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$', wishlist.views.delete),
+]
