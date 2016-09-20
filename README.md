@@ -3,6 +3,7 @@ darky
 
 Wishes tracking application.
 
+[![Build Status](https://travis-ci.org/nijel/darky.svg?branch=master)](https://travis-ci.org/nijel/darky)
 [![Code Health](https://landscape.io/github/nijel/darky/master/landscape.png)](https://landscape.io/github/nijel/darky/master)
 [![Translation status](https://hosted.weblate.org/widgets/darky/-/shields-badge.svg)](https://hosted.weblate.org/engage/darky/?utm_source=widget)
 
