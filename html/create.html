@@ -14,7 +14,9 @@
 
 {% block content %}
 
+{% if foruser %}
 {% show_message "info" _("You are adding gift for somebody else. It will be visible for you only so that you can remember it.") %}
+{% endif %}
 
 <form method="POST" action=".">
 {% csrf_token %}
