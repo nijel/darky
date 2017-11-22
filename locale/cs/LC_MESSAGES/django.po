@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Dárky 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2015-06-03 14:18+0200\n"
+"PO-Revision-Date: 2017-11-22 07:32+0000\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/darky/master/cs/>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.3-dev\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -47,10 +47,8 @@ msgid "Wishlists"
 msgstr "Seznamy dárků"
 
 #: html/base.html:54
-#, fuzzy
-#| msgid "Logged out"
 msgid "Log out"
-msgstr "Odhlášen"
+msgstr "Odhlásit"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
@@ -131,8 +129,6 @@ msgid "More details:"
 msgstr "Více podrobností:"
 
 #: html/list-add.html:4
-#, fuzzy
-#| msgid "You can add here gifts you want to buy to this person."
 msgid "Here you can add gifts you want to buy this person."
 msgstr "Můžete zde zadat dárky které chcete koupit této osobě."
 
@@ -192,7 +188,7 @@ msgstr "Chybné uživatelské jméno a heslo. Prosím zkus to znovu."
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "Přihlásit"
 
 #: wishlist/models.py:10
 msgid "Very low"
@@ -219,16 +215,12 @@ msgid "Description"
 msgstr "Popis"
 
 #: wishlist/models.py:34
-#, fuzzy
-#| msgid ""
-#| "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
-#| "\">markdown</a>."
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
 msgstr ""
-"Můžeš použít <a href=\"http://daringfireball.net/projects/markdown/syntax"
-"\">markdown</a>."
+"Můžeš použít <a href=\"http://daringfireball.net/projects/markdown/syntax\""
+">Markdown</a>."
 
 #: wishlist/models.py:44
 msgid "Link"
