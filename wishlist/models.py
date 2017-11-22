@@ -32,7 +32,7 @@ class Gift(models.Model):
         ugettext_lazy('Description'),
         help_text=ugettext_lazy(
             'You can use <a href="http://daringfireball.net'
-            '/projects/markdown/syntax">markdown</a>.'
+            '/projects/markdown/syntax">Markdown</a>.'
         ),
         blank=True
     )
