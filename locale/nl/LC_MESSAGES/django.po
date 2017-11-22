@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-03 14:16+0200\n"
+"POT-Creation-Date: 2017-11-22 08:30+0100\n"
 "PO-Revision-Date: 2017-01-09 11:18+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/darky/master/nl/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Gifts"
 msgstr "Geschenken"
 
-#: html/base.html:7 html/base.html.py:35
+#: html/base.html:7 html/base.html:35
 msgid "Overview"
 msgstr "Overzicht"
 
@@ -47,23 +47,25 @@ msgid "Wishlists"
 msgstr "Verlanglijsten"
 
 #: html/base.html:54
-msgid "Logout"
-msgstr "Uitloggen"
+#, fuzzy
+#| msgid "Logged out"
+msgid "Log out"
+msgstr "Uitgelogd"
 
-#: html/buylist.html:5 html/buylist.html.py:10
+#: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
 msgstr "Geschenken om te kopen"
 
-#: html/create.html:9 html/create.html.py:26
+#: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
 msgstr "Nieuw geschenk creëren voor %(name)s"
 
-#: html/create.html:11 html/create.html.py:28
+#: html/create.html:11 html/create.html:30
 msgid "Create new gift"
 msgstr "Nieuw geschenk creëren"
 
-#: html/create.html:17
+#: html/create.html:18
 msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
@@ -71,16 +73,16 @@ msgstr ""
 "U voegt een geschenk toe voor iemand anders. Het geschenk zal alleen "
 "zichtbaar zijn voor u zodat u herinnerd kunt worden."
 
-#: html/create.html:39
+#: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
 msgstr "U bent een geschenk aan het creëren voor %(name)s."
 
-#: html/create.html:42
+#: html/create.html:44
 msgid "Create"
 msgstr "Creëren"
 
-#: html/edit.html:6 html/edit.html.py:14
+#: html/edit.html:6 html/edit.html:14
 msgid "Edit gift"
 msgstr "Geschenk bewerken"
 
@@ -129,7 +131,9 @@ msgid "More details:"
 msgstr "Meer details:"
 
 #: html/list-add.html:4
-msgid "You can add here gifts you want to buy to this person."
+#, fuzzy
+#| msgid "You can add here gifts you want to buy to this person."
+msgid "Here you can add gifts you want to buy this person."
 msgstr "U kunt hier geschenken toevoegen die u wilt kopen voor deze persoon."
 
 #: html/list.html:7
@@ -175,10 +179,10 @@ msgstr "Uitgelogd"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
-msgstr "U bent uitgelogd. Ga terug naar de <a href=\"/login/\">inlogpagina</a>."
+msgstr ""
+"U bent uitgelogd. Ga terug naar de <a href=\"/login/\">inlogpagina</a>."
 
-#: html/registration/login.html:7 html/registration/login.html.py:19
-#: html/registration/login.html:26
+#: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
 msgstr "Inloggen"
 
@@ -186,6 +190,10 @@ msgstr "Inloggen"
 msgid "Your username and password didn't match. Please try again."
 msgstr ""
 "Uw gebruikersnaam en wachtwoord komen niet overeen. Probeer het opnieuw."
+
+#: html/registration/login.html:26
+msgid "Log in"
+msgstr ""
 
 #: wishlist/models.py:10
 msgid "Very low"
@@ -212,12 +220,16 @@ msgid "Description"
 msgstr "Omschrijving"
 
 #: wishlist/models.py:34
+#, fuzzy
+#| msgid ""
+#| "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
+#| "\">markdown</a>."
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
-"\">markdown</a>."
+"\">Markdown</a>."
 msgstr ""
-"U kunt ook gebruikmaken van <a href=\""
-"http://daringfireball.net/projects/markdown/syntax\">opmaak</a>."
+"U kunt ook gebruikmaken van <a href=\"http://daringfireball.net/projects/"
+"markdown/syntax\">opmaak</a>."
 
 #: wishlist/models.py:44
 msgid "Link"
@@ -227,35 +239,38 @@ msgstr "Link"
 msgid "Expected price"
 msgstr "Verwachte prijs"
 
-#: wishlist/views.py:66
+#: wishlist/views.py:68
 #, python-format
 msgid "Gift \"%s\" created."
 msgstr "Geschenk \"%s\" is gecreëerd."
 
-#: wishlist/views.py:69
+#: wishlist/views.py:71
 msgid "Gift not created!"
 msgstr "Geschenk is niet gecreëerd!"
 
-#: wishlist/views.py:87
+#: wishlist/views.py:89
 #, python-format
 msgid "Gift \"%s\" marked as bought."
 msgstr "Geschenk \"%s\" is gemarkeerd als zijnde gekocht."
 
-#: wishlist/views.py:98
+#: wishlist/views.py:100
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
 msgstr "Geschenk \"%s\" is niet langer gemarkeerd als zijn gekocht."
 
-#: wishlist/views.py:110
+#: wishlist/views.py:112
 #, python-format
 msgid "Gift \"%s\" deleted."
 msgstr "Geschenk \"%s\" is verwijderd."
 
-#: wishlist/views.py:126
+#: wishlist/views.py:128
 #, python-format
 msgid "Gift \"%s\" updated."
 msgstr "Geschenk \"%s\" is bijgewerkt."
 
-#: wishlist/views.py:129
+#: wishlist/views.py:131
 msgid "Gift not updated!"
 msgstr "Geschenk is niet bijgewerkt!"
+
+#~ msgid "Logout"
+#~ msgstr "Uitloggen"
