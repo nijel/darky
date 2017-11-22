@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-03 14:16+0200\n"
-"PO-Revision-Date: 2017-10-22 11:47+0000\n"
+"PO-Revision-Date: 2017-11-22 05:56+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://hosted.weblate.org/projects/darky/master/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -48,7 +48,6 @@ msgid "Wishlists"
 msgstr "Ønskelister"
 
 #: html/base.html:54
-#, fuzzy
 msgid "Logout"
 msgstr "Logg ut"
 
@@ -131,7 +130,6 @@ msgid "More details:"
 msgstr "Flere detaljer:"
 
 #: html/list-add.html:4
-#, fuzzy
 msgid "You can add here gifts you want to buy to this person."
 msgstr "Du kan legge til gaver her som du ønsker å kjøpe denne personen."
 
@@ -152,7 +150,6 @@ msgid "Priority"
 msgstr "Prioritet"
 
 #: html/list.html:11
-#, fuzzy
 msgctxt "Shortcut for priority"
 msgid "P"
 msgstr "P"
@@ -184,7 +181,6 @@ msgstr ""
 
 #: html/registration/login.html:7 html/registration/login.html.py:19
 #: html/registration/login.html:26
-#, fuzzy
 msgid "Login"
 msgstr "Logg inn"
 
@@ -217,7 +213,6 @@ msgid "Description"
 msgstr "Beskrivelse"
 
 #: wishlist/models.py:34
-#, fuzzy
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">markdown</a>."
