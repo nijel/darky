@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2017-01-09 11:18+0000\n"
+"PO-Revision-Date: 2017-11-22 09:52+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/darky/master/nl/>\n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.11-dev\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -47,10 +47,8 @@ msgid "Wishlists"
 msgstr "Verlanglijsten"
 
 #: html/base.html:54
-#, fuzzy
-#| msgid "Logged out"
 msgid "Log out"
-msgstr "Uitgelogd"
+msgstr "Uitloggen"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
@@ -131,8 +129,6 @@ msgid "More details:"
 msgstr "Meer details:"
 
 #: html/list-add.html:4
-#, fuzzy
-#| msgid "You can add here gifts you want to buy to this person."
 msgid "Here you can add gifts you want to buy this person."
 msgstr "U kunt hier geschenken toevoegen die u wilt kopen voor deze persoon."
 
@@ -193,7 +189,7 @@ msgstr ""
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "Inloggen"
 
 #: wishlist/models.py:10
 msgid "Very low"
@@ -220,16 +216,12 @@ msgid "Description"
 msgstr "Omschrijving"
 
 #: wishlist/models.py:34
-#, fuzzy
-#| msgid ""
-#| "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
-#| "\">markdown</a>."
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
 msgstr ""
-"U kunt ook gebruikmaken van <a href=\"http://daringfireball.net/projects/"
-"markdown/syntax\">opmaak</a>."
+"U kunt ook gebruikmaken van <a href=\""
+"http://daringfireball.net/projects/markdown/syntax\">opmaak</a>."
 
 #: wishlist/models.py:44
 msgid "Link"
