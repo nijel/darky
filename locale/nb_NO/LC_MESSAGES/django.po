@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2017-11-22 05:56+0000\n"
+"PO-Revision-Date: 2017-11-24 15:34+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/darky/"
-"master/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://hosted.weblate.org/projects/darky/master/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,10 +48,8 @@ msgid "Wishlists"
 msgstr "Ønskelister"
 
 #: html/base.html:54
-#, fuzzy
-#| msgid "Logged out"
 msgid "Log out"
-msgstr "Utlogget"
+msgstr "Logg ut"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
@@ -132,8 +130,6 @@ msgid "More details:"
 msgstr "Flere detaljer:"
 
 #: html/list-add.html:4
-#, fuzzy
-#| msgid "You can add here gifts you want to buy to this person."
 msgid "Here you can add gifts you want to buy this person."
 msgstr "Du kan legge til gaver her som du ønsker å kjøpe denne personen."
 
@@ -193,7 +189,7 @@ msgstr "Brukernavnet eller passordet ditt stemte ikke. Prøv igjen."
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "Logg inn"
 
 #: wishlist/models.py:10
 msgid "Very low"
@@ -220,16 +216,12 @@ msgid "Description"
 msgstr "Beskrivelse"
 
 #: wishlist/models.py:34
-#, fuzzy
-#| msgid ""
-#| "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
-#| "\">markdown</a>."
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
 msgstr ""
-"Du kan bruke <a href=\"http://daringfireball.net/projects/markdown/syntax"
-"\">Markdown</a>."
+"Du kan bruke <a href=\"http://daringfireball.net/projects/markdown/syntax\""
+">Markdown</a>."
 
 #: wishlist/models.py:44
 msgid "Link"
