@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2018-02-01 18:37+0000\n"
+"PO-Revision-Date: 2018-02-19 13:36+0000\n"
 "Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/darky/master/de/>"
 "\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.19-dev\n"
+"X-Generator: Weblate 2.19\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -56,7 +56,7 @@ msgid "Gifts to buy"
 msgstr "Geschenke zum Kaufen"
 
 #: html/create.html:9 html/create.html:28
-#, fuzzy, python-format
+#, python-format
 msgid "Create new gift for %(name)s"
 msgstr "Neues Geschenk für %(name)s hinzufügen"
 
@@ -73,7 +73,7 @@ msgstr ""
 "selbst sichtbar sein, damit Sie es sich merken können."
 
 #: html/create.html:41
-#, fuzzy, python-format
+#, python-format
 msgid "You are creating gift for %(name)s."
 msgstr "Sie haben ein Geschenk für %(name)s erstellt."
 
