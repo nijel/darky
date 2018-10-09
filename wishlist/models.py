@@ -41,7 +41,7 @@ class Gift(models.Model):
         blank=True
     )
     url = models.URLField(
-        ugettext_lazy('Link'), null=True, blank=True
+        ugettext_lazy('Link'), null=True, blank=True, max_length=500
     )
     price = models.IntegerField(
         ugettext_lazy('Expected price'), null=True, blank=True
