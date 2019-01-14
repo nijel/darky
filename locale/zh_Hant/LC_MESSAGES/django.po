@@ -8,250 +8,255 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-01-15 05:19+0000\n"
+"Last-Translator: Louies <louies0623@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"darky/master/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
-msgstr ""
+msgstr "禮物"
 
 #: html/base.html:7 html/base.html:35
 msgid "Overview"
-msgstr ""
+msgstr "簡介"
 
 #: html/base.html:23
 msgid "Toggle navigation"
-msgstr ""
+msgstr "切換導航"
 
 #: html/base.html:36
 msgid "Own"
-msgstr ""
+msgstr "擁有"
 
 #: html/base.html:37 html/list.html:28
 msgid "Buying"
-msgstr ""
+msgstr "購買中"
 
 #: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
 msgid "Add"
-msgstr ""
+msgstr "添加"
 
 #: html/base.html:40
 msgid "Wishlists"
-msgstr ""
+msgstr "願望清單"
 
 #: html/base.html:54
 msgid "Log out"
-msgstr ""
+msgstr "登出"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
-msgstr ""
+msgstr "買禮物"
 
 #: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
-msgstr ""
+msgstr "為 %(name)s 建立新禮物"
 
 #: html/create.html:11 html/create.html:30
 msgid "Create new gift"
-msgstr ""
+msgstr "建立新的禮物"
 
 #: html/create.html:18
 msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
-msgstr ""
+msgstr "你在給別人加入禮物。它將是可見的，只有這樣你才能記住它。"
 
 #: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr ""
+msgstr "你正在建立禮物給 %(name)s 。"
 
 #: html/create.html:44
 msgid "Create"
-msgstr ""
+msgstr "建立"
 
 #: html/edit.html:6 html/edit.html:14
 msgid "Edit gift"
-msgstr ""
+msgstr "編輯禮物"
 
 #: html/edit.html:21
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: html/gift-actions.html:4
 msgid "Edit"
-msgstr ""
+msgstr "編輯"
 
 #: html/gift-actions.html:5
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: html/gift-actions.html:8
 msgid "Buy"
-msgstr ""
+msgstr "購買"
 
 #: html/gift-actions.html:11
 msgid "Revoke"
-msgstr ""
+msgstr "撤銷"
 
 #: html/gift.html:15
 msgid "You are currently marked as buyer of this gift."
-msgstr ""
+msgstr "您目前被標記為此禮物的買家。"
 
 #: html/gift.html:18
 msgid "This item is marked as bought."
-msgstr ""
+msgstr "此專案被標記為已購買。"
 
 #: html/gift.html:23
 msgid "Gift for:"
-msgstr ""
+msgstr "禮物給："
 
 #: html/gift.html:24
 msgid "Priority:"
-msgstr ""
+msgstr "優先："
 
 #: html/gift.html:27
 msgid "Estimated price:"
-msgstr ""
+msgstr "預計售價："
 
 #: html/gift.html:31
 msgid "More details:"
-msgstr ""
+msgstr "更多細節："
 
 #: html/list-add.html:4
 msgid "Here you can add gifts you want to buy this person."
-msgstr ""
+msgstr "在這裡，您可以添加想要購買此人的禮物。"
 
 #: html/list.html:7
 msgid "User"
-msgstr ""
+msgstr "使用者"
 
 #: html/list.html:9 wishlist/models.py:29
 msgid "Title"
-msgstr ""
+msgstr "名稱"
 
 #: html/list.html:10
 msgid "Price"
-msgstr ""
+msgstr "售價"
 
 #: html/list.html:11 wishlist/models.py:50
 msgid "Priority"
-msgstr ""
+msgstr "優先"
 
 #: html/list.html:11
 msgctxt "Shortcut for priority"
 msgid "P"
-msgstr ""
+msgstr "P"
 
 #: html/list.html:12
 msgid "Actions"
-msgstr ""
+msgstr "行動"
 
 #: html/list.html:23
 msgid "Taken"
-msgstr ""
+msgstr "拿取"
 
 #: html/list.html:26
 msgid "Private"
-msgstr ""
+msgstr "私人"
 
 #: html/list.html:32
 msgid "Not defined"
-msgstr ""
+msgstr "未定義"
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
-msgstr ""
+msgstr "已登出"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
-msgstr ""
+msgstr "您已登出。 返回 <a href=\"/login/\"> 再次登入 </a>。"
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
-msgstr ""
+msgstr "登入"
 
 #: html/registration/login.html:12
 msgid "Your username and password didn't match. Please try again."
-msgstr ""
+msgstr "您的用戶名和密碼不正確。 請再試一次。"
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "登入"
 
 #: wishlist/models.py:10
 msgid "Very low"
-msgstr ""
+msgstr "非常低"
 
 #: wishlist/models.py:11
 msgid "Low"
-msgstr ""
+msgstr "低"
 
 #: wishlist/models.py:12
 msgid "Standard"
-msgstr ""
+msgstr "標準"
 
 #: wishlist/models.py:13
 msgid "High"
-msgstr ""
+msgstr "高"
 
 #: wishlist/models.py:14
 msgid "Very high"
-msgstr ""
+msgstr "非常高"
 
 #: wishlist/models.py:32
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: wishlist/models.py:34
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
 msgstr ""
+"您可以使用 <a href=\"http://daringfireball.net/projects/markdown/syntax\"> 來降價 "
+"</a>。"
 
 #: wishlist/models.py:44
 msgid "Link"
-msgstr ""
+msgstr "連結"
 
 #: wishlist/models.py:47
 msgid "Expected price"
-msgstr ""
+msgstr "預期售價"
 
 #: wishlist/views.py:68
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr ""
+msgstr "禮物 “%s” 已經建立。"
 
 #: wishlist/views.py:71
 msgid "Gift not created!"
-msgstr ""
+msgstr "禮物沒有建立！"
 
 #: wishlist/views.py:89
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr ""
+msgstr "禮物 “%s” 標記為已購買。"
 
 #: wishlist/views.py:100
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr ""
+msgstr "禮品 “%s” 不再標記為已購買。"
 
 #: wishlist/views.py:112
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr ""
+msgstr "禮物 “%s” 已刪除。"
 
 #: wishlist/views.py:128
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr ""
+msgstr "禮物 “%s” 已更新。"
 
 #: wishlist/views.py:131
 msgid "Gift not updated!"
-msgstr ""
+msgstr "禮物沒有更新！"
