@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2019-06-19 19:00+0000\n"
+"PO-Revision-Date: 2019-06-21 16:00+0000\n"
 "Last-Translator: THANOS SIOURDAKIS <siourdakisthanos@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/darky/master/el/>\n"
 "Language: el\n"
@@ -68,6 +68,8 @@ msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
 msgstr ""
+"Προσθέτεις δώρο για κάποιον άλλο. Θα είναι ορατό μόνο για εσάς, ώστε να "
+"μπορείτε να το θυμηθείτε."
 
 #: html/create.html:41
 #, python-format
