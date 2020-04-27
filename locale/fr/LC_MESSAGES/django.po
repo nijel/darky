@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2019-03-01 14:17+0000\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
+"PO-Revision-Date: 2020-04-28 04:11+0000\n"
+"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/darky/master/fr/>"
 "\n"
 "Language: fr\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #: html/base.html:7
 msgid "Gifts"
-msgstr "Cadeaux et cadeaux"
+msgstr "Cadeaux"
 
 #: html/base.html:7 html/base.html:35
 msgid "Overview"
@@ -37,7 +37,7 @@ msgstr "Propre"
 
 #: html/base.html:37 html/list.html:28
 msgid "Buying"
-msgstr "Acheter"
+msgstr "Achats"
 
 #: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
 msgid "Add"
@@ -132,7 +132,8 @@ msgstr "Plus de détails :"
 #: html/list-add.html:4
 msgid "Here you can add gifts you want to buy this person."
 msgstr ""
-"Ici, vous pouvez ajouter des cadeaux que vous voulez acheter cette personne."
+"Ici, vous pouvez ajouter des cadeaux que vous voulez acheter pour cette "
+"personne."
 
 #: html/list.html:7
 msgid "User"
@@ -177,7 +178,7 @@ msgstr "Déconnecté"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
-msgstr "Vous avez été déconnecté. Retour à <a href=\"/login/\">login</a>."
+msgstr "Vous avez été déconnecté·e. Retour à <a href=\"/login/\">connexion</a>."
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
@@ -191,7 +192,7 @@ msgstr ""
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr "Ouvrir une session"
+msgstr "Se connecter"
 
 #: wishlist/models.py:10
 msgid "Very low"
@@ -245,23 +246,23 @@ msgstr "Cadeau non créé !"
 #: wishlist/views.py:89
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr "Cadeau \"%s\" marqué comme acheté."
+msgstr "Cadeau « %s » marqué comme acheté."
 
 #: wishlist/views.py:100
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr "Les \"%s\" de cadeaux ne sont plus marqués comme achetés."
+msgstr "Le cadeau « %s » n'est plus marqué comme acheté."
 
 #: wishlist/views.py:112
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr "Cadeau \"%s\" supprimé."
+msgstr "Cadeau « %s » supprimé."
 
 #: wishlist/views.py:128
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr "Cadeaux \"%s\" mis à jour."
+msgstr "Cadeaux « %s » mis à jour."
 
 #: wishlist/views.py:131
 msgid "Gift not updated!"
-msgstr "Cadeau non mis à jour !"
+msgstr "Cadeau non mis à jour !"
