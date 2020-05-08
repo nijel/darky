@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2020-02-23 00:32+0000\n"
-"Last-Translator: Michal Biesiada <blade-14@o2.pl>\n"
+"PO-Revision-Date: 2020-05-09 14:12+0000\n"
+"Last-Translator: Szylu <chipolade@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/darky/master/pl/>"
 "\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -30,11 +30,11 @@ msgstr "Przegląd"
 
 #: html/base.html:23
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Przełącz nawigację"
 
 #: html/base.html:36
 msgid "Own"
-msgstr ""
+msgstr "Własność"
 
 #: html/base.html:37 html/list.html:28
 msgid "Buying"
@@ -46,7 +46,7 @@ msgstr "Dodaj"
 
 #: html/base.html:40
 msgid "Wishlists"
-msgstr ""
+msgstr "Listy życzeń"
 
 #: html/base.html:54
 msgid "Log out"
@@ -54,12 +54,12 @@ msgstr "Wyloguj"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
-msgstr ""
+msgstr "Prezenty do kupienia"
 
 #: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
-msgstr ""
+msgstr "Stwórz nowy prezent dla %(name)s"
 
 #: html/create.html:11 html/create.html:30
 msgid "Create new gift"
@@ -70,192 +70,197 @@ msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
 msgstr ""
+"Dajesz prezent komuś innemu. Będzie widoczny tylko dla Ciebie, abyś mógł go "
+"zapamiętać."
 
 #: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr ""
+msgstr "Tworzysz prezent dla %(name)s."
 
 #: html/create.html:44
 msgid "Create"
-msgstr ""
+msgstr "Stwórz"
 
 #: html/edit.html:6 html/edit.html:14
 msgid "Edit gift"
-msgstr ""
+msgstr "Edytuj prezent"
 
 #: html/edit.html:21
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #: html/gift-actions.html:4
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 #: html/gift-actions.html:5
 msgid "Delete"
-msgstr ""
+msgstr "Usuń"
 
 #: html/gift-actions.html:8
 msgid "Buy"
-msgstr ""
+msgstr "Kup"
 
 #: html/gift-actions.html:11
 msgid "Revoke"
-msgstr ""
+msgstr "Odwołaj"
 
 #: html/gift.html:15
 msgid "You are currently marked as buyer of this gift."
-msgstr ""
+msgstr "Jesteś obecnie oznaczony jako kupujący ten prezent."
 
 #: html/gift.html:18
 msgid "This item is marked as bought."
-msgstr ""
+msgstr "Ten przedmiot jest oznaczony jako kupiony."
 
 #: html/gift.html:23
 msgid "Gift for:"
-msgstr ""
+msgstr "Prezent dla:"
 
 #: html/gift.html:24
 msgid "Priority:"
-msgstr ""
+msgstr "Priorytet:"
 
 #: html/gift.html:27
 msgid "Estimated price:"
-msgstr ""
+msgstr "Przewidywana cena:"
 
 #: html/gift.html:31
 msgid "More details:"
-msgstr ""
+msgstr "Więcej szczegółów:"
 
 #: html/list-add.html:4
 msgid "Here you can add gifts you want to buy this person."
-msgstr ""
+msgstr "Tutaj możesz dodać prezenty, które chcesz kupić tej osobie."
 
 #: html/list.html:7
 msgid "User"
-msgstr ""
+msgstr "Użytkownik"
 
 #: html/list.html:9 wishlist/models.py:29
 msgid "Title"
-msgstr ""
+msgstr "Tytuł"
 
 #: html/list.html:10
 msgid "Price"
-msgstr ""
+msgstr "Cena"
 
 #: html/list.html:11 wishlist/models.py:50
 msgid "Priority"
-msgstr ""
+msgstr "Priorytet"
 
 #: html/list.html:11
 msgctxt "Shortcut for priority"
 msgid "P"
-msgstr ""
+msgstr "P"
 
 #: html/list.html:12
 msgid "Actions"
-msgstr ""
+msgstr "Akcje"
 
 #: html/list.html:23
 msgid "Taken"
-msgstr ""
+msgstr "Zajęte"
 
 #: html/list.html:26
 msgid "Private"
-msgstr ""
+msgstr "Prywatne"
 
 #: html/list.html:32
 msgid "Not defined"
-msgstr ""
+msgstr "Nie zdefiniowane"
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
-msgstr ""
+msgstr "Wylogowano"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
-msgstr ""
+msgstr "Zostałeś wylogowany. Wróć do <a href=\"/login/\">logowania</a>."
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: html/registration/login.html:12
 msgid "Your username and password didn't match. Please try again."
 msgstr ""
+"Twoja nazwa użytkownika i hasło nie zgadzają się. Proszę spróbuj ponownie."
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "Zaloguj się"
 
 #: wishlist/models.py:10
 msgid "Very low"
-msgstr ""
+msgstr "Bardzo niski"
 
 #: wishlist/models.py:11
 msgid "Low"
-msgstr ""
+msgstr "Niski"
 
 #: wishlist/models.py:12
 msgid "Standard"
-msgstr ""
+msgstr "Standardowy"
 
 #: wishlist/models.py:13
 msgid "High"
-msgstr ""
+msgstr "Wysoki"
 
 #: wishlist/models.py:14
 msgid "Very high"
-msgstr ""
+msgstr "Bardzo wysoki"
 
 #: wishlist/models.py:32
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #: wishlist/models.py:34
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
 msgstr ""
+"Możesz użyć <a href=\"http://daringfireball.net/projects/markdown/syntax\""
+">Markdown</a>."
 
 #: wishlist/models.py:44
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #: wishlist/models.py:47
 msgid "Expected price"
-msgstr ""
+msgstr "Przewidywana cena"
 
 #: wishlist/views.py:68
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr ""
+msgstr "Utworzono prezent „%s”."
 
 #: wishlist/views.py:71
 msgid "Gift not created!"
-msgstr ""
+msgstr "Prezent nie został utworzony!"
 
 #: wishlist/views.py:89
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr ""
+msgstr "Prezent „%s” został oznaczony jako kupiony."
 
 #: wishlist/views.py:100
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr ""
+msgstr "Prezent „%s” nie jest już oznaczony jako kupiony."
 
 #: wishlist/views.py:112
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr ""
+msgstr "Prezent „%s” usunięto."
 
 #: wishlist/views.py:128
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr ""
+msgstr "Prezent „%s” zaktualizowano."
 
 #: wishlist/views.py:131
 msgid "Gift not updated!"
-msgstr ""
+msgstr "Prezent nie został zaktualizowany!"
