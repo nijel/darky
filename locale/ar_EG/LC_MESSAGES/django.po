@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2021-10-28 10:42+0000\n"
+"PO-Revision-Date: 2021-10-29 18:36+0000\n"
 "Last-Translator: Khaled Aly <khaledalyalyabbas@gmail.com>\n"
 "Language-Team: Arabic (Egypt) <https://hosted.weblate.org/projects/darky/"
 "master/ar_EG/>\n"
@@ -46,107 +46,109 @@ msgstr "أضافة"
 
 #: html/base.html:40
 msgid "Wishlists"
-msgstr ""
+msgstr "قوائم الرغبات"
 
 #: html/base.html:54
 msgid "Log out"
-msgstr ""
+msgstr "تسجيل خروج"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
-msgstr ""
+msgstr "هدايا للشراء"
 
 #: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
-msgstr ""
+msgstr "إنشاء هدية جديدة لـ٪ (name) s"
 
 #: html/create.html:11 html/create.html:30
 msgid "Create new gift"
-msgstr ""
+msgstr "اصنع هدية جديدة"
 
 #: html/create.html:18
 msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
-msgstr ""
+msgstr "أنت تضيف هدية لشخص آخر. سيكون مرئيًا لك فقط بحيث يمكنك تذكره."
 
 #: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr ""
+msgstr "انت بتخلق هدية الى ."
 
 #: html/create.html:44
 msgid "Create"
-msgstr ""
+msgstr "يخلق"
 
 #: html/edit.html:6 html/edit.html:14
 msgid "Edit gift"
-msgstr ""
+msgstr "تعديل الهدية"
 
 #: html/edit.html:21
 msgid "Save"
-msgstr ""
+msgstr "حفظ"
 
 #: html/gift-actions.html:4
 msgid "Edit"
-msgstr ""
+msgstr "تعديل"
 
 #: html/gift-actions.html:5
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: html/gift-actions.html:8
 msgid "Buy"
-msgstr ""
+msgstr "يشترى"
 
 #: html/gift-actions.html:11
 msgid "Revoke"
-msgstr ""
+msgstr "سحب او إبطال"
 
 #: html/gift.html:15
 msgid "You are currently marked as buyer of this gift."
-msgstr ""
+msgstr "تم وضع علامة عليك حاليا كمشتري لهذه الهدية."
 
 #: html/gift.html:18
 msgid "This item is marked as bought."
-msgstr ""
+msgstr "تم تمييز هذا العنصر بأنه تم شراؤه"
 
 #: html/gift.html:23
 msgid "Gift for:"
-msgstr ""
+msgstr "هدية ل"
 
 #: html/gift.html:24
 msgid "Priority:"
-msgstr ""
+msgstr "أولوية"
 
 #: html/gift.html:27
 msgid "Estimated price:"
-msgstr ""
+msgstr "السعر المقدر:"
 
 #: html/gift.html:31
 msgid "More details:"
-msgstr ""
+msgstr "المزيد من التفاصيل:"
 
 #: html/list-add.html:4
 msgid "Here you can add gifts you want to buy this person."
 msgstr ""
+"هنا يمكنك إضافة الهدايا التي ترغب في شرائها لهذا الشخص   OR يمكنك هنا إضافة "
+"الهدايا التي تريد شراء هذا الشخص بها."
 
 #: html/list.html:7
 msgid "User"
-msgstr ""
+msgstr "مستخدم"
 
 #: html/list.html:9 wishlist/models.py:29
 msgid "Title"
-msgstr ""
+msgstr "عنوان"
 
 #: html/list.html:10
 msgid "Price"
-msgstr ""
+msgstr "سعر"
 
 #: html/list.html:11 wishlist/models.py:50
 msgid "Priority"
-msgstr ""
+msgstr "أولوية"
 
 #: html/list.html:11
 msgctxt "Shortcut for priority"
@@ -155,73 +157,73 @@ msgstr ""
 
 #: html/list.html:12
 msgid "Actions"
-msgstr ""
+msgstr "أجراءات"
 
 #: html/list.html:23
 msgid "Taken"
-msgstr ""
+msgstr "مأخوذ"
 
 #: html/list.html:26
 msgid "Private"
-msgstr ""
+msgstr "خاص"
 
 #: html/list.html:32
 msgid "Not defined"
-msgstr ""
+msgstr "غير معروف"
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
-msgstr ""
+msgstr "تسجيل الخروج"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
-msgstr ""
+msgstr "لقد تم تسجيل الخروج  ارجع الى الدخول"
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
-msgstr ""
+msgstr "تسجيل الدخول"
 
 #: html/registration/login.html:12
 msgid "Your username and password didn't match. Please try again."
-msgstr ""
+msgstr "اسم المستخدم وكلمة المرور غير متطابقين. حاول مرة اخرى."
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "يسجل دخول"
 
 #: wishlist/models.py:10
 msgid "Very low"
-msgstr ""
+msgstr "منخفظ جدا"
 
 #: wishlist/models.py:11
 msgid "Low"
-msgstr ""
+msgstr "واطى"
 
 #: wishlist/models.py:12
 msgid "Standard"
-msgstr ""
+msgstr "اساسى"
 
 #: wishlist/models.py:13
 msgid "High"
-msgstr ""
+msgstr "عالى"
 
 #: wishlist/models.py:14
 msgid "Very high"
-msgstr ""
+msgstr "عالى جدا"
 
 #: wishlist/models.py:32
 msgid "Description"
-msgstr ""
+msgstr "توصيف"
 
 #: wishlist/models.py:34
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
-msgstr ""
+msgstr "’ممكن ان تستخدم"
 
 #: wishlist/models.py:44
 msgid "Link"
-msgstr ""
+msgstr "حلقة وصل"
 
 #: wishlist/models.py:47
 msgid "Expected price"
