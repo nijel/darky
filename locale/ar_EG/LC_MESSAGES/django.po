@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2020-11-10 15:28+0000\n"
-"Last-Translator: Ahmed744 <ahmed504730@gmail.com>\n"
+"PO-Revision-Date: 2021-10-28 10:42+0000\n"
+"Last-Translator: Khaled Aly <khaledalyalyabbas@gmail.com>\n"
 "Language-Team: Arabic (Egypt) <https://hosted.weblate.org/projects/darky/"
 "master/ar_EG/>\n"
 "Language: ar_EG\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -38,11 +38,11 @@ msgstr "خاصة"
 
 #: html/base.html:37 html/list.html:28
 msgid "Buying"
-msgstr ""
+msgstr "شراء"
 
 #: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
 msgid "Add"
-msgstr ""
+msgstr "أضافة"
 
 #: html/base.html:40
 msgid "Wishlists"
