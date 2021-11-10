@@ -72,7 +72,7 @@ msgid ""
 msgstr "أنت تضيف هدية لشخص آخر. سيكون مرئيًا لك فقط بحيث يمكنك تذكره."
 
 #: html/create.html:41
-#, python-format
+#, python-format, fuzzy
 msgid "You are creating gift for %(name)s."
 msgstr "انت بتخلق هدية الى ."
 
