@@ -22,8 +22,8 @@ class Migration(migrations.Migration):
                 ('url', models.URLField(null=True, verbose_name='Link', blank=True)),
                 ('price', models.IntegerField(null=True, verbose_name='Expected price', blank=True)),
                 ('priority', models.IntegerField(default=3, verbose_name='Priority', choices=[(1, 'Very low'), (2, 'Low'), (3, 'Standard'), (4, 'High'), (5, 'Very high')])),
-                ('buyer', models.ForeignKey(related_name=b'given_set', blank=True, to=settings.AUTH_USER_MODEL, null=True)),
-                ('owner', models.ForeignKey(related_name=b'present_set', to=settings.AUTH_USER_MODEL)),
+                ('buyer', models.ForeignKey(related_name='given_set', blank=True, to=settings.AUTH_USER_MODEL, null=True, on_delete=models.deletion.SET_NULL)),
+                ('owner', models.ForeignKey(related_name='present_set', to=settings.AUTH_USER_MODEL, on_delete=models.deletion.CASCADE)),
             ],
             options={
             },

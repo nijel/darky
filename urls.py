@@ -1,10 +1,10 @@
-from django.conf.urls import include, url
+from django.urls import include, path, re_path
 from django.conf import settings
 
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 import django.contrib.auth.views
 import django.views.static
+from django.contrib.auth import views as auth_views
 
 import wishlist.views
 
@@ -13,50 +13,45 @@ admin.autodiscover()
 urlpatterns = [
     # Example:
     # (r'^darky/', include('darky.foo.urls')),
-    url(r'^$', wishlist.views.overview),
-    url(r'^create/$', wishlist.views.create),
-    url(r'^buy/$', wishlist.views.buylist),
+    re_path(r'^$', wishlist.views.overview),
+    re_path(r'^create/$', wishlist.views.create),
+    re_path(r'^buy/$', wishlist.views.buylist),
 
-    url(r'^login/$', django.contrib.auth.views.login),
-    url(r'^logout/$', django.contrib.auth.views.logout),
+    path('login/', auth_views.LoginView.as_view()),
+    path('logout/', auth_views.LogoutView.as_view()),
 
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
-    # to INSTALLED_APPS to enable admin documentation:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
+    path('admin/', admin.site.urls),
 
     # Static media for development
-    url(
+    re_path(
         r'^media/(?P<path>.*)$',
         django.views.static.serve,
         {'document_root': settings.MEDIA_ROOT}
     ),
 
     # Need to be last to avoid conflicts on userid
-    url(r'^(?P<userid>[^/]*)/$', wishlist.views.userlist),
-    url(
+    re_path(r'^(?P<userid>[^/]*)/$', wishlist.views.userlist),
+    re_path(
         r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/$',
         wishlist.views.gift,
         name='gift'
     ),
-    url(
+    re_path(
         r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$',
         wishlist.views.buy,
         name='buy'
     ),
-    url(
+    re_path(
         r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$',
         wishlist.views.revoke,
         name='revoke'
     ),
-    url(
+    re_path(
         r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$',
         wishlist.views.edit,
         name='edit'
         ),
-    url(
+    re_path(
         r'^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$',
         wishlist.views.delete,
         name='delete'

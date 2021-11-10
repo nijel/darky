@@ -2,35 +2,36 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
-from django.utils.translation import ugettext_lazy
+from django.utils.translation import gettext_lazy
+from django.urls import reverse
 
 import markdown
 
 PRIORITY_CHOICES = (
-    (1, ugettext_lazy('Very low')),
-    (2, ugettext_lazy('Low')),
-    (3, ugettext_lazy('Standard')),
-    (4, ugettext_lazy('High')),
-    (5, ugettext_lazy('Very high')),
+    (1, gettext_lazy('Very low')),
+    (2, gettext_lazy('Low')),
+    (3, gettext_lazy('Standard')),
+    (4, gettext_lazy('High')),
+    (5, gettext_lazy('Very high')),
 )
 
 
 class Gift(models.Model):
     owner = models.ForeignKey(
-        User, related_name='present_set'
+        User, related_name='present_set', on_delete=models.deletion.CASCADE
     )
     buyer = models.ForeignKey(
-        User, null=True, blank=True, related_name='given_set'
+        User, null=True, blank=True, related_name='given_set', on_delete=models.deletion.SET_NULL
     )
     private = models.BooleanField(
         default=False
     )
     title = models.CharField(
-        ugettext_lazy('Title'), max_length=250
+        gettext_lazy('Title'), max_length=250
     )
     description = models.TextField(
-        ugettext_lazy('Description'),
-        help_text=ugettext_lazy(
+        gettext_lazy('Description'),
+        help_text=gettext_lazy(
             'You can use <a href="http://daringfireball.net'
             '/projects/markdown/syntax">Markdown</a>.'
         ),
@@ -41,13 +42,13 @@ class Gift(models.Model):
         blank=True
     )
     url = models.URLField(
-        ugettext_lazy('Link'), null=True, blank=True, max_length=500
+        gettext_lazy('Link'), null=True, blank=True, max_length=500
     )
     price = models.IntegerField(
-        ugettext_lazy('Expected price'), null=True, blank=True
+        gettext_lazy('Expected price'), null=True, blank=True
     )
     priority = models.IntegerField(
-        ugettext_lazy('Priority'), choices=PRIORITY_CHOICES, default=3
+        gettext_lazy('Priority'), choices=PRIORITY_CHOICES, default=3
     )
 
     def __unicode__(self):
@@ -57,13 +58,8 @@ class Gift(models.Model):
         self.description_html = markdown.markdown(self.description)
         super(Gift, self).save(*args, **kwargs)
 
-    @models.permalink
     def get_absolute_url(self, part='gift'):
-        return (
-            part,
-            (),
-            {'giftid': self.id, 'userid': self.owner.username}
-        )
+        return reverse("gift", kwargs={'giftid': self.id, 'userid': self.owner.username})
 
     def get_delete_url(self):
         return self.get_absolute_url('delete')
