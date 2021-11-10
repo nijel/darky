@@ -59,7 +59,7 @@ msgstr "هدايا للشراء"
 #: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
-msgstr "إنشاء هدية جديدة لـ٪ (name) s"
+msgstr "إنشاء هدية جديدة لـ %(name)s"
 
 #: html/create.html:11 html/create.html:30
 msgid "Create new gift"
