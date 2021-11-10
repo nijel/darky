@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2021-10-29 18:36+0000\n"
-"Last-Translator: Khaled Aly <khaledalyalyabbas@gmail.com>\n"
+"PO-Revision-Date: 2021-11-10 10:33+0000\n"
+"Last-Translator: Michal Čihař <michal@weblate.org>\n"
 "Language-Team: Arabic (Egypt) <https://hosted.weblate.org/projects/darky/"
 "master/ar_EG/>\n"
 "Language: ar_EG\n"
@@ -72,7 +72,7 @@ msgid ""
 msgstr "أنت تضيف هدية لشخص آخر. سيكون مرئيًا لك فقط بحيث يمكنك تذكره."
 
 #: html/create.html:41
-#, python-format
+#, fuzzy, python-format
 msgid "You are creating gift for %(name)s."
 msgstr "انت بتخلق هدية الى ."
 
