@@ -34,7 +34,7 @@ jobs:
       - name: Compile MO files
         run: ./manage.py compilemessages
       - name: Collect static files
-        run: ./manage.py collectstatic
+        run: ./manage.py collectstatic --noinput
       - name: Django checks
         run: ./manage.py check
       - name: Test with Django
