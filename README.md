@@ -1,5 +1,4 @@
-darky
-=====
+# darky
 
 Wishes tracking application.
 
@@ -8,8 +7,7 @@ Wishes tracking application.
 [![Translation status](https://hosted.weblate.org/widgets/darky/-/shields-badge.svg)](https://hosted.weblate.org/engage/darky/?utm_source=widget)
 [![codecov](https://codecov.io/gh/nijel/darky/branch/master/graph/badge.svg)](https://codecov.io/gh/nijel/darky)
 
-License
--------
+## License
 
 Copyright (C) 2008 - 2016 Michal Čihař michal@cihar.com
 

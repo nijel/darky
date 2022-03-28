@@ -4,12 +4,12 @@ from wishlist.models import Gift
 
 
 class NewGift(ModelForm):
-    class Meta(object):
+    class Meta:
         model = Gift
         fields = (
-            'title',
-            'description',
-            'url',
-            'price',
-            'priority',
+            "title",
+            "description",
+            "url",
+            "price",
+            "priority",
         )
