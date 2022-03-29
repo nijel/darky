@@ -2,10 +2,10 @@
 
 Wishes tracking application.
 
-[![Build Status](https://travis-ci.org/nijel/darky.svg?branch=master)](https://travis-ci.org/nijel/darky)
-[![Code Health](https://landscape.io/github/nijel/darky/master/landscape.png)](https://landscape.io/github/nijel/darky/master)
+[![CI status](https://github.com/nijel/darky/actions/workflows/test.yml/badge.svg)](https://github.com/nijel/darky/actions/workflows/test.yml)
 [![Translation status](https://hosted.weblate.org/widgets/darky/-/shields-badge.svg)](https://hosted.weblate.org/engage/darky/?utm_source=widget)
 [![codecov](https://codecov.io/gh/nijel/darky/branch/master/graph/badge.svg)](https://codecov.io/gh/nijel/darky)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/nijel/darky/master.svg)](https://results.pre-commit.ci/latest/github/nijel/darky/master)
 
 ## License
 
