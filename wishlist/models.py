@@ -35,13 +35,15 @@ class Gift(models.Model):
         blank=True,
     )
     description_html = models.TextField(editable=False, blank=True)
-    url = models.URLField(gettext_lazy("Link"), null=True, blank=True, max_length=500)
+    url = models.URLField(  # noqa: DJ01
+        gettext_lazy("Link"), null=True, blank=True, max_length=500
+    )
     price = models.IntegerField(gettext_lazy("Expected price"), null=True, blank=True)
     priority = models.IntegerField(
         gettext_lazy("Priority"), choices=PRIORITY_CHOICES, default=3
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return f"{self.title} ({self.owner.get_full_name()})"
 
     def save(self, *args, **kwargs):

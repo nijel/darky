@@ -3,15 +3,13 @@ import django.views.static
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.urls import include, path, re_path
+from django.urls import path, re_path
 
 import wishlist.views
 
 admin.autodiscover()
 
 urlpatterns = [
-    # Example:
-    # (r'^darky/', include('darky.foo.urls')),
     re_path(r"^$", wishlist.views.overview),
     re_path(r"^create/$", wishlist.views.create),
     re_path(r"^buy/$", wishlist.views.buylist),

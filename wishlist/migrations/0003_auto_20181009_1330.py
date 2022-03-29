@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="gift",
             name="url",
-            field=models.URLField(
+            field=models.URLField(  # noqa: DJ01
                 blank=True, max_length=500, null=True, verbose_name="Link"
             ),
         ),
