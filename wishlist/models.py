@@ -51,9 +51,7 @@ class Gift(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self, part="gift"):
-        return reverse(
-            "gift", kwargs={"giftid": self.id, "userid": self.owner.username}
-        )
+        return reverse(part, kwargs={"giftid": self.id, "userid": self.owner.username})
 
     def get_delete_url(self):
         return self.get_absolute_url("delete")
