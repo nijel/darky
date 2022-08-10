@@ -43,6 +43,10 @@ class Gift(models.Model):
         gettext_lazy("Priority"), choices=PRIORITY_CHOICES, default=3
     )
 
+    class Meta:
+        verbose_name = "Gift"
+        verbose_name_plural = "Gifts"
+
     def __str__(self):
         return f"{self.title} ({self.owner.get_full_name()})"
 
