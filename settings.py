@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     "django.contrib.admin",
     "django.contrib.admindocs",
     "crispy_forms",
+    "crispy_bootstrap3",
     "wishlist",
 )
 
@@ -162,4 +163,5 @@ ALLOWED_HOSTS = ["darky", "localhost", "127.0.0.1"]
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
 
 # Render forms using bootstrap
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap3"
 CRISPY_TEMPLATE_PACK = "bootstrap3"
