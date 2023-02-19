@@ -8,58 +8,61 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-20 23:42+0000\n"
+"Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/darky/master/"
+"id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
-msgstr ""
+msgstr "Hadiah"
 
 #: html/base.html:7 html/base.html:35
 msgid "Overview"
-msgstr ""
+msgstr "Ikhtisiar"
 
 #: html/base.html:23
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Beralih navigasi"
 
 #: html/base.html:36
 msgid "Own"
-msgstr ""
+msgstr "Punya"
 
 #: html/base.html:37 html/list.html:28
 msgid "Buying"
-msgstr ""
+msgstr "Beli"
 
 #: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
 msgid "Add"
-msgstr ""
+msgstr "Tambah"
 
 #: html/base.html:40
 msgid "Wishlists"
-msgstr ""
+msgstr "Daftar Keinginan"
 
 #: html/base.html:54
 msgid "Log out"
-msgstr ""
+msgstr "Keluar"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
-msgstr ""
+msgstr "Hadiah untuk dibeli"
 
 #: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
-msgstr ""
+msgstr "Buat hadiah baru untuk %(name)s"
 
 #: html/create.html:11 html/create.html:30
 msgid "Create new gift"
-msgstr ""
+msgstr "Buat hadiah baru"
 
 #: html/create.html:18
 msgid ""
@@ -82,19 +85,19 @@ msgstr ""
 
 #: html/edit.html:21
 msgid "Save"
-msgstr ""
+msgstr "Simpan"
 
 #: html/gift-actions.html:4
 msgid "Edit"
-msgstr ""
+msgstr "Ubah"
 
 #: html/gift-actions.html:5
 msgid "Delete"
-msgstr ""
+msgstr "Hapus"
 
 #: html/gift-actions.html:8
 msgid "Buy"
-msgstr ""
+msgstr "Beli"
 
 #: html/gift-actions.html:11
 msgid "Revoke"
