@@ -10,9 +10,9 @@ import wishlist.views
 admin.autodiscover()
 
 urlpatterns = [
-    re_path(r"^$", wishlist.views.overview),
-    re_path(r"^create/$", wishlist.views.create),
-    re_path(r"^buy/$", wishlist.views.buylist),
+    path("", wishlist.views.overview),
+    path("create/", wishlist.views.create),
+    path("buy/", wishlist.views.buylist),
     path("login/", auth_views.LoginView.as_view()),
     path("logout/", auth_views.LogoutView.as_view()),
     path("admin/", admin.site.urls),

@@ -81,7 +81,7 @@ def buy(request, userid, giftid):
         raise Http404("User on gift do not match!")
     obj.buy(request.user)
     messages.success(request, _('Gift "%s" marked as bought.') % obj.title)
-    return redirect(request.META.get("HTTP_REFERER", "/"))
+    return redirect(request.headers.get("referer", "/"))
 
 
 @login_required
@@ -91,7 +91,7 @@ def revoke(request, userid, giftid):
         raise Http404("User on gift do not match!")
     obj.revoke()
     messages.success(request, _('Gift "%s" no longer marked as bought.') % obj.title)
-    return redirect(request.META.get("HTTP_REFERER", "/"))
+    return redirect(request.headers.get("referer", "/"))
 
 
 @login_required
