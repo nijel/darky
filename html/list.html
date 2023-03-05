@@ -14,7 +14,7 @@
 </thead>
 <tbody>
 {% for gift in gifts %}
-<tr class="{% ifequal gift.buyer user %}info{% else %}{% if gift.buyer %}warning{% endif %}{% endifequal %}">
+<tr class="{% if gift.buyer == user %}info{% else %}{% if gift.buyer %}warning{% endif %}{% endif %}">
 {% if show_user %}
 <td><a href="/{{ gift.owner.username }}/">{{ gift.owner.get_full_name }}</a></td>
 {% endif %}

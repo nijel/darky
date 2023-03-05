@@ -11,13 +11,13 @@
 <div class="panel-heading"><h4>{{ gift.title }}</h4></div>
 <div class="panel-body">
 
-{% ifequal gift.buyer user %}
+{% if gift.buyer == user %}
 {% show_message "info" _("You are currently marked as buyer of this gift.") %}
 {% else %}
 {% if gift.buyer %}
 {% show_message "info" _("This item is marked as bought.") %}
 {% endif %}
-{% endifequal %}
+{% end %}
 
 <table class="table">
 <tr><th>{% trans "Gift for:" %}</th><td>{{ gift.owner.get_full_name }}</td></tr>
