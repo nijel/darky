@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2023-02-20 23:42+0000\n"
+"PO-Revision-Date: 2023-03-19 03:47+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/darky/master/"
 "id/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -69,19 +69,21 @@ msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
 msgstr ""
+"Anda menambahkan hadiah untuk orang lain. Hadiah ini hanya akan terlihat "
+"oleh Anda untuk dapat mengingatnya."
 
 #: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr ""
+msgstr "Anda membuat hadiah untuk %(name)s."
 
 #: html/create.html:44
 msgid "Create"
-msgstr ""
+msgstr "Buat"
 
 #: html/edit.html:6 html/edit.html:14
 msgid "Edit gift"
-msgstr ""
+msgstr "Ubah hadiah"
 
 #: html/edit.html:21
 msgid "Save"
@@ -101,76 +103,78 @@ msgstr "Beli"
 
 #: html/gift-actions.html:11
 msgid "Revoke"
-msgstr ""
+msgstr "Cabut"
 
 #: html/gift.html:15
 msgid "You are currently marked as buyer of this gift."
-msgstr ""
+msgstr "Anda saat ini ditandai sebagai pembeli hadiah ini."
 
 #: html/gift.html:18
 msgid "This item is marked as bought."
-msgstr ""
+msgstr "Item ini ditandai sebagai dibeli."
 
 #: html/gift.html:23
 msgid "Gift for:"
-msgstr ""
+msgstr "Hadiah untuk:"
 
 #: html/gift.html:24
 msgid "Priority:"
-msgstr ""
+msgstr "Prioritas:"
 
 #: html/gift.html:27
 msgid "Estimated price:"
-msgstr ""
+msgstr "Perkiraan harga:"
 
 #: html/gift.html:31
 msgid "More details:"
-msgstr ""
+msgstr "Detail lebih lanjut:"
 
 #: html/list-add.html:4
 msgid "Here you can add gifts you want to buy this person."
 msgstr ""
+"Anda dapat menambahkan hadiah yang ingin Anda belikan untuk orang tersebut "
+"di sini."
 
 #: html/list.html:7
 msgid "User"
-msgstr ""
+msgstr "Pengguna"
 
 #: html/list.html:9 wishlist/models.py:29
 msgid "Title"
-msgstr ""
+msgstr "Judul"
 
 #: html/list.html:10
 msgid "Price"
-msgstr ""
+msgstr "Harga"
 
 #: html/list.html:11 wishlist/models.py:50
 msgid "Priority"
-msgstr ""
+msgstr "Prioritas"
 
 #: html/list.html:11
 msgctxt "Shortcut for priority"
 msgid "P"
-msgstr ""
+msgstr "P"
 
 #: html/list.html:12
 msgid "Actions"
-msgstr ""
+msgstr "Tindakan"
 
 #: html/list.html:23
 msgid "Taken"
-msgstr ""
+msgstr "Diambil"
 
 #: html/list.html:26
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: html/list.html:32
 msgid "Not defined"
-msgstr ""
+msgstr "Tidak didefinisikan"
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
-msgstr ""
+msgstr "Keluar"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
