@@ -4,6 +4,7 @@ profile = "black"
 [tool.ruff]
 ignore = ["D211", "D212", "D100", "D104", "D101", "D103", "D102", "D105", "D106", "DJ001"]
 select = ["E", "F", "B", "A", "C4", "DJ", "D", "ERA", "EXE", "G", "T20", "RET", "SLF", "N"]
+format = "github"
 
 [tool.ruff.per-file-ignores]
 "wishlist/migrations/0001_initial.py" = ["E501"]
