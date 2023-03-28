@@ -1,0 +1,13 @@
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+ignore = ["D211", "D212", "D100", "D104", "D101", "D103", "D102", "D105", "D106", "DJ001"]
+select = ["E", "F", "B", "A", "C4", "DJ", "D", "ERA", "EXE", "G", "T20", "RET", "SLF", "N"]
+
+[tool.ruff.per-file-ignores]
+"wishlist/migrations/0001_initial.py" = ["E501"]
+"wishlist/migrations/0003_auto_20181009_1330.py" = ["E501"]
+
+[tool.ruff.mccabe]
+max-complexity = 16
