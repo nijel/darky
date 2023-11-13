@@ -1397,13 +1397,14 @@ if (typeof jQuery === "undefined") {
             parentDim.height
             ? "top"
             : placement == "top" &&
-              pos.top - parentDim.scroll - actualHeight < 0
-            ? "bottom"
-            : placement == "right" && pos.right + actualWidth > parentDim.width
-            ? "left"
-            : placement == "left" && pos.left - actualWidth < parentDim.left
-            ? "right"
-            : placement;
+                pos.top - parentDim.scroll - actualHeight < 0
+              ? "bottom"
+              : placement == "right" &&
+                  pos.right + actualWidth > parentDim.width
+                ? "left"
+                : placement == "left" && pos.left - actualWidth < parentDim.left
+                  ? "right"
+                  : placement;
 
         $tip.removeClass(orgPlacement).addClass(placement);
       }
@@ -1574,19 +1575,19 @@ if (typeof jQuery === "undefined") {
           left: pos.left + pos.width / 2 - actualWidth / 2,
         }
       : placement == "top"
-      ? {
-          top: pos.top - actualHeight,
-          left: pos.left + pos.width / 2 - actualWidth / 2,
-        }
-      : placement == "left"
-      ? {
-          top: pos.top + pos.height / 2 - actualHeight / 2,
-          left: pos.left - actualWidth,
-        }
-      : /* placement == 'right' */ {
-          top: pos.top + pos.height / 2 - actualHeight / 2,
-          left: pos.left + pos.width,
-        };
+        ? {
+            top: pos.top - actualHeight,
+            left: pos.left + pos.width / 2 - actualWidth / 2,
+          }
+        : placement == "left"
+          ? {
+              top: pos.top + pos.height / 2 - actualHeight / 2,
+              left: pos.left - actualWidth,
+            }
+          : /* placement == 'right' */ {
+              top: pos.top + pos.height / 2 - actualHeight / 2,
+              left: pos.left + pos.width,
+            };
   };
 
   Tooltip.prototype.getViewportAdjustedDelta = function (
@@ -2224,11 +2225,11 @@ if (typeof jQuery === "undefined") {
       this.unpin != null && scrollTop + this.unpin <= position.top
         ? false
         : offsetBottom != null &&
-          position.top + this.$element.height() >= scrollHeight - offsetBottom
-        ? "bottom"
-        : offsetTop != null && scrollTop <= offsetTop
-        ? "top"
-        : false;
+            position.top + this.$element.height() >= scrollHeight - offsetBottom
+          ? "bottom"
+          : offsetTop != null && scrollTop <= offsetTop
+            ? "top"
+            : false;
 
     if (this.affixed === affix) return;
     if (this.unpin != null) this.$element.css("top", "");
