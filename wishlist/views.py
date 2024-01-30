@@ -13,7 +13,8 @@ from wishlist.models import Gift
 @login_required
 def overview(request):
     gifts = Gift.objects.filter(Q(private=False) | Q(buyer=request.user)).order_by(
-        "owner", "-priority"
+        "owner",
+        "-priority",
     )
     return render(request, "overview.html", {"gifts": gifts})
 
@@ -22,7 +23,8 @@ def overview(request):
 def userlist(request, userid):
     user = get_object_or_404(User, username=userid)
     gifts = Gift.objects.filter(
-        Q(private=False) | Q(buyer=request.user), owner=user
+        Q(private=False) | Q(buyer=request.user),
+        owner=user,
     ).order_by("-priority")
     return render(request, "userlist.html", {"gifts": gifts, "listuser": user})
 

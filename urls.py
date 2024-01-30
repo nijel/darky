@@ -26,7 +26,9 @@ urlpatterns = [
     re_path(r"^(?P<userid>[^/]*)/$", wishlist.views.userlist),
     re_path(r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/$", wishlist.views.gift, name="gift"),
     re_path(
-        r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$", wishlist.views.buy, name="buy"
+        r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/buy/$",
+        wishlist.views.buy,
+        name="buy",
     ),
     re_path(
         r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/revoke/$",
@@ -34,7 +36,9 @@ urlpatterns = [
         name="revoke",
     ),
     re_path(
-        r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$", wishlist.views.edit, name="edit"
+        r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/edit/$",
+        wishlist.views.edit,
+        name="edit",
     ),
     re_path(
         r"^(?P<userid>[^/]*)/(?P<giftid>\d*)/delete/$",

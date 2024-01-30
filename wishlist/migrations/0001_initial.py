@@ -32,14 +32,18 @@ class Migration(migrations.Migration):
                 ("description_html", models.TextField(editable=False, blank=True)),
                 (
                     "url",
-                    models.URLField(  # noqa: DJ01
-                        null=True, verbose_name="Link", blank=True
+                    models.URLField(
+                        null=True,
+                        verbose_name="Link",
+                        blank=True,
                     ),
                 ),
                 (
                     "price",
                     models.IntegerField(
-                        null=True, verbose_name="Expected price", blank=True
+                        null=True,
+                        verbose_name="Expected price",
+                        blank=True,
                     ),
                 ),
                 (

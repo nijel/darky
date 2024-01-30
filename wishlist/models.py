@@ -15,7 +15,9 @@ PRIORITY_CHOICES = (
 
 class Gift(models.Model):
     owner = models.ForeignKey(
-        User, related_name="present_set", on_delete=models.deletion.CASCADE
+        User,
+        related_name="present_set",
+        on_delete=models.deletion.CASCADE,
     )
     buyer = models.ForeignKey(
         User,
@@ -30,17 +32,22 @@ class Gift(models.Model):
         gettext_lazy("Description"),
         help_text=gettext_lazy(
             'You can use <a href="http://daringfireball.net'
-            '/projects/markdown/syntax">Markdown</a>.'
+            '/projects/markdown/syntax">Markdown</a>.',
         ),
         blank=True,
     )
     description_html = models.TextField(editable=False, blank=True)
-    url = models.URLField(  # noqa: DJ01
-        gettext_lazy("Link"), null=True, blank=True, max_length=500
+    url = models.URLField(
+        gettext_lazy("Link"),
+        null=True,
+        blank=True,
+        max_length=500,
     )
     price = models.IntegerField(gettext_lazy("Expected price"), null=True, blank=True)
     priority = models.IntegerField(
-        gettext_lazy("Priority"), choices=PRIORITY_CHOICES, default=3
+        gettext_lazy("Priority"),
+        choices=PRIORITY_CHOICES,
+        default=3,
     )
 
     class Meta:
