@@ -1,5 +1,5 @@
 test-warnings: yes
 strictness: veryhigh
 uses:
-  - django
+- django
 autodetect: yes
