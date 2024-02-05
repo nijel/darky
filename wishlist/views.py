@@ -45,9 +45,9 @@ def gift(request, userid, giftid):
 
 @login_required
 def create(request):
-    if "for" in request.GET and request.GET["for"]:
+    if request.GET.get("for"):
         foruser = User.objects.get(username=request.GET["for"])
-    elif "for" in request.POST and request.POST["for"]:
+    elif request.POST.get("for"):
         foruser = User.objects.get(username=request.POST["for"])
     else:
         foruser = None
