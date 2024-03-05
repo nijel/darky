@@ -50,6 +50,7 @@
     {% endif %}
       </ul>
       <form method="post" action="/logout/">
+      {% csrf_token %}
       <ul class="nav navbar-nav navbar-right flip">
         {% if user.is_authenticated %}
         <li><button class="btn btn-link" type="submit"><span class="glyphicon glyphicon-log-out"></span> {% trans "Log out" %}</button></li>
