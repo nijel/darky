@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2024-03-11 23:01+0000\n"
-"Last-Translator: mahmoud abd elghafar <esl2my@gmail.com>\n"
+"PO-Revision-Date: 2024-06-04 06:09+0000\n"
+"Last-Translator: hossamm <hossamamrat470@gmail.com>\n"
 "Language-Team: Arabic (Egypt) <https://hosted.weblate.org/projects/darky/"
 "master/ar_EG/>\n"
 "Language: ar_EG\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -153,7 +153,7 @@ msgstr "أولوية"
 #: html/list.html:11
 msgctxt "Shortcut for priority"
 msgid "P"
-msgstr ""
+msgstr "Adult"
 
 #: html/list.html:12
 msgid "Actions"
