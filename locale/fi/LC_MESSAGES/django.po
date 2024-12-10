@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2020-04-28 04:11+0000\n"
-"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2024-12-10 10:00+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/darky/master/fi/>"
 "\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.2\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -182,7 +182,7 @@ msgstr ""
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
-msgstr "Kirjaudu sisään"
+msgstr "Sisäänkirjautuminen"
 
 #: html/registration/login.html:12
 msgid "Your username and password didn't match. Please try again."
