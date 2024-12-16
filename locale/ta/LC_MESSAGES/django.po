@@ -8,250 +8,258 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-16 04:24+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/darky/master/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9-rc\n"
 
 #: html/base.html:7
 msgid "Gifts"
-msgstr ""
+msgstr "பரிசுகள்"
 
 #: html/base.html:7 html/base.html:35
 msgid "Overview"
-msgstr ""
+msgstr "கண்ணோட்டம்"
 
 #: html/base.html:23
 msgid "Toggle navigation"
-msgstr ""
+msgstr "வழிசெலுத்தலை மாற்றவும்"
 
 #: html/base.html:36
 msgid "Own"
-msgstr ""
+msgstr "சொந்தமானது"
 
 #: html/base.html:37 html/list.html:28
 msgid "Buying"
-msgstr ""
+msgstr "வாங்குதல்"
 
 #: html/base.html:38 html/list-add-own.html:4 html/list-add.html:5
 msgid "Add"
-msgstr ""
+msgstr "கூட்டு"
 
 #: html/base.html:40
 msgid "Wishlists"
-msgstr ""
+msgstr "விருப்பப்பட்டியல்கள்"
 
 #: html/base.html:54
 msgid "Log out"
-msgstr ""
+msgstr "விடுபதிகை"
 
 #: html/buylist.html:5 html/buylist.html:10
 msgid "Gifts to buy"
-msgstr ""
+msgstr "வாங்க பரிசுகள்"
 
 #: html/create.html:9 html/create.html:28
 #, python-format
 msgid "Create new gift for %(name)s"
-msgstr ""
+msgstr "%(name)s புதிய பரிசை உருவாக்கவும்"
 
 #: html/create.html:11 html/create.html:30
 msgid "Create new gift"
-msgstr ""
+msgstr "புதிய பரிசை உருவாக்கவும்"
 
 #: html/create.html:18
 msgid ""
 "You are adding gift for somebody else. It will be visible for you only so "
 "that you can remember it."
 msgstr ""
+"நீங்கள் வேறொருவருக்கு பரிசைச் சேர்க்கிறீர்கள். நீங்கள் அதை நினைவில் வைத்துக் கொள்வதற்காக மட்டுமே"
+" இது உங்களுக்குத் தெரியும்."
 
 #: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr ""
+msgstr "நீங்கள் %(name)s பரிசை உருவாக்குகிறீர்கள்."
 
 #: html/create.html:44
 msgid "Create"
-msgstr ""
+msgstr "உருவாக்கு"
 
 #: html/edit.html:6 html/edit.html:14
 msgid "Edit gift"
-msgstr ""
+msgstr "பரிசைத் திருத்தவும்"
 
 #: html/edit.html:21
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: html/gift-actions.html:4
 msgid "Edit"
-msgstr ""
+msgstr "தொகு"
 
 #: html/gift-actions.html:5
 msgid "Delete"
-msgstr ""
+msgstr "நீக்கு"
 
 #: html/gift-actions.html:8
 msgid "Buy"
-msgstr ""
+msgstr "வாங்க"
 
 #: html/gift-actions.html:11
 msgid "Revoke"
-msgstr ""
+msgstr "ரத்து செய்யுங்கள்"
 
 #: html/gift.html:15
 msgid "You are currently marked as buyer of this gift."
-msgstr ""
+msgstr "நீங்கள் தற்போது இந்த பரிசை வாங்குபவராக குறிக்கப்பட்டுள்ளீர்கள்."
 
 #: html/gift.html:18
 msgid "This item is marked as bought."
-msgstr ""
+msgstr "இந்த உருப்படி வாங்கப்பட்டதாக குறிக்கப்பட்டுள்ளது."
 
 #: html/gift.html:23
 msgid "Gift for:"
-msgstr ""
+msgstr "இதற்கான பரிசு:"
 
 #: html/gift.html:24
 msgid "Priority:"
-msgstr ""
+msgstr "முன்னுரிமை:"
 
 #: html/gift.html:27
 msgid "Estimated price:"
-msgstr ""
+msgstr "மதிப்பிடப்பட்ட விலை:"
 
 #: html/gift.html:31
 msgid "More details:"
-msgstr ""
+msgstr "மேலும் விவரங்கள்:"
 
 #: html/list-add.html:4
 msgid "Here you can add gifts you want to buy this person."
-msgstr ""
+msgstr "இந்த நபரை நீங்கள் வாங்க விரும்பும் பரிசுகளை இங்கே சேர்க்கலாம்."
 
 #: html/list.html:7
 msgid "User"
-msgstr ""
+msgstr "பயனர்"
 
 #: html/list.html:9 wishlist/models.py:29
 msgid "Title"
-msgstr ""
+msgstr "தலைப்பு"
 
 #: html/list.html:10
 msgid "Price"
-msgstr ""
+msgstr "விலை"
 
 #: html/list.html:11 wishlist/models.py:50
 msgid "Priority"
-msgstr ""
+msgstr "முன்னுரிமை"
 
 #: html/list.html:11
 msgctxt "Shortcut for priority"
 msgid "P"
-msgstr ""
+msgstr "ப"
 
 #: html/list.html:12
 msgid "Actions"
-msgstr ""
+msgstr "செயல்கள்"
 
 #: html/list.html:23
 msgid "Taken"
-msgstr ""
+msgstr "எடுக்கப்பட்டது"
 
 #: html/list.html:26
 msgid "Private"
-msgstr ""
+msgstr "தனிப்பட்ட"
 
 #: html/list.html:32
 msgid "Not defined"
-msgstr ""
+msgstr "வரையறுக்கப்படவில்லை"
 
 #: html/registration/logged_out.html:6
 msgid "Logged out"
-msgstr ""
+msgstr "வெளியேறியது"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
 msgstr ""
+"நீங்கள் வெளியேறிவிட்டீர்கள். <A href = \"/உள்நுழைவு/\"> உள்நுழைவு </a> க்குச் செல்லவும்."
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
-msgstr ""
+msgstr "புகுபதிவு"
 
 #: html/registration/login.html:12
 msgid "Your username and password didn't match. Please try again."
 msgstr ""
+"உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல் பொருந்தவில்லை. மீண்டும் முயற்சிக்கவும்."
 
 #: html/registration/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "புகுபதிகை"
 
 #: wishlist/models.py:10
 msgid "Very low"
-msgstr ""
+msgstr "மிகக் குறைவு"
 
 #: wishlist/models.py:11
 msgid "Low"
-msgstr ""
+msgstr "குறைந்த"
 
 #: wishlist/models.py:12
 msgid "Standard"
-msgstr ""
+msgstr "தரநிலை"
 
 #: wishlist/models.py:13
 msgid "High"
-msgstr ""
+msgstr "உயர்ந்த"
 
 #: wishlist/models.py:14
 msgid "Very high"
-msgstr ""
+msgstr "மிக உயர்ந்த"
 
 #: wishlist/models.py:32
 msgid "Description"
-msgstr ""
+msgstr "விவரம்"
 
 #: wishlist/models.py:34
 msgid ""
 "You can use <a href=\"http://daringfireball.net/projects/markdown/syntax"
 "\">Markdown</a>."
 msgstr ""
+"நீங்கள் <a href = \"http://daringfireball.net/projects/markdown/syntax\"> மார்க் "
+"பேரூர் </a> ஐப் பயன்படுத்தலாம்."
 
 #: wishlist/models.py:44
 msgid "Link"
-msgstr ""
+msgstr "இணைப்பு"
 
 #: wishlist/models.py:47
 msgid "Expected price"
-msgstr ""
+msgstr "எதிர்பார்க்கப்படும் விலை"
 
 #: wishlist/views.py:68
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr ""
+msgstr "பரிசு \"%s\" உருவாக்கப்பட்டது."
 
 #: wishlist/views.py:71
 msgid "Gift not created!"
-msgstr ""
+msgstr "பரிசு உருவாக்கப்படவில்லை!"
 
 #: wishlist/views.py:89
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr ""
+msgstr "வாங்கியபடி குறிக்கப்பட்ட பரிசு \"%s\"."
 
 #: wishlist/views.py:100
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr ""
+msgstr "பரிசு \"%s\" இனி வாங்கப்பட்டதாகக் குறிக்கப்படவில்லை."
 
 #: wishlist/views.py:112
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr ""
+msgstr "பரிசு \"%s\" நீக்கப்பட்டது."
 
 #: wishlist/views.py:128
 #, python-format
 msgid "Gift \"%s\" updated."
-msgstr ""
+msgstr "பரிசு \"%s\" புதுப்பிக்கப்பட்டது."
 
 #: wishlist/views.py:131
 msgid "Gift not updated!"
-msgstr ""
+msgstr "பரிசு புதுப்பிக்கப்படவில்லை!"
