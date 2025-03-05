@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2024-10-04 21:15+0000\n"
-"Last-Translator: tamer magdy <tamermagdy502@gmail.com>\n"
+"PO-Revision-Date: 2025-03-05 11:19+0000\n"
+"Last-Translator: \"baby Secret (Blozzom)\" <workemailsecret@gmail.com>\n"
 "Language-Team: Arabic (Egypt) <https://hosted.weblate.org/projects/darky/"
 "master/ar_EG/>\n"
 "Language: ar_EG\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -74,7 +74,7 @@ msgstr "أنت تضيف هدية لشخص آخر. سيكون مرئيًا لك �
 #: html/create.html:41
 #, python-format
 msgid "You are creating gift for %(name)s."
-msgstr "انت تنشأ هدية إلي %(name)s"
+msgstr "انت تنشأ هدية إلي %(name)s."
 
 #: html/create.html:44
 msgid "Create"
@@ -110,7 +110,7 @@ msgstr "تم وضع علامة عليك حاليا كمشتري لهذه اله�
 
 #: html/gift.html:18
 msgid "This item is marked as bought."
-msgstr "تم شراء هذا العنصر"
+msgstr "تم شراء هذا العنصر."
 
 #: html/gift.html:23
 msgid "Gift for:"
@@ -175,7 +175,7 @@ msgstr "تسجيل الخروج"
 
 #: html/registration/logged_out.html:10
 msgid "You have been logged out. Go back to <a href=\"/login/\">login</a>."
-msgstr "لقد تم تسجيل خروجك . العودة الي الدخول<a href=\"/login/\"></a>"
+msgstr "لقد تم تسجيل خروجك . العودة الي الدخول<a href=\"/login/\"></a>."
 
 #: html/registration/login.html:7 html/registration/login.html:19
 msgid "Login"
@@ -219,7 +219,7 @@ msgid ""
 "\">Markdown</a>."
 msgstr ""
 "<a href=\"http://daringfireball.net/projects/markdown/syntax\"></a>’ممكن ان "
-"تستخدم"
+"تستخدم."
 
 #: wishlist/models.py:44
 msgid "Link"
@@ -227,37 +227,37 @@ msgstr "حلقة وصل"
 
 #: wishlist/models.py:47
 msgid "Expected price"
-msgstr ""
+msgstr "السعر المتوقع"
 
 #: wishlist/views.py:68
 #, python-format
 msgid "Gift \"%s\" created."
-msgstr ""
+msgstr "هدية \"%s\" خلقت."
 
 #: wishlist/views.py:71
 msgid "Gift not created!"
-msgstr ""
+msgstr "هدية لم تخلق!"
 
 #: wishlist/views.py:89
 #, python-format
 msgid "Gift \"%s\" marked as bought."
-msgstr ""
+msgstr "هدية \"%s\" علامة على شرائها."
 
 #: wishlist/views.py:100
 #, python-format
 msgid "Gift \"%s\" no longer marked as bought."
-msgstr ""
+msgstr "هدية \"%s\" لم تعد علامة على شرائها."
 
 #: wishlist/views.py:112
 #, python-format
 msgid "Gift \"%s\" deleted."
-msgstr ""
+msgstr "هدية \"%s\" حذفت."
 
 #: wishlist/views.py:128
-#, python-format
+#, fuzzy, python-format
 msgid "Gift \"%s\" updated."
-msgstr ""
+msgstr "تم تحديث \"([X6])."
 
 #: wishlist/views.py:131
 msgid "Gift not updated!"
-msgstr ""
+msgstr "هدية لم تستكمل!"
