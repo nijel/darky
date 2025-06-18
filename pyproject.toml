@@ -2,6 +2,9 @@
 profile = "black"
 
 [tool.ruff]
+output-format = "github"
+
+[tool.ruff.lint]
 ignore = [
   "TRY003",
   "EM101",
@@ -22,12 +25,11 @@ ignore = [
   "DJ001",
   "ANN"
 ]
-output-format = "github"
 select = ["ALL"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 16
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "wishlist/migrations/0001_initial.py" = ["E501"]
 "wishlist/migrations/0003_auto_20181009_1330.py" = ["E501"]
