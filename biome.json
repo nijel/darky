@@ -1,0 +1,51 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!media/js/bootstrap.js",
+      "!media/js/bootstrap.min.js",
+      "!media/css/bootstrap.css",
+      "!media/css/bootstrap.min.css",
+      "!media/css/bootstrap-theme.css",
+      "!media/css/bootstrap-theme.min.css",
+      "!media/js/jquery-2.1.1.min.js"
+    ]
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noParameterAssign": "error",
+        "useDefaultParameterLast": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "useNumberNamespace": "error",
+        "noDescendingSpecificity": "off",
+        "noUselessElse": "error"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "globals": [
+      "$"
+    ]
+  },
+  "json": {
+    "formatter": {
+      "enabled": false
+    }
+  }
+}
