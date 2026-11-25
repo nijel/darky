@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 08:30+0100\n"
-"PO-Revision-Date: 2025-03-05 11:19+0000\n"
-"Last-Translator: \"baby Secret (Blozzom)\" <workemailsecret@gmail.com>\n"
+"PO-Revision-Date: 2026-11-26 23:51+0000\n"
+"Last-Translator: 233ahmedahmed155-cpu <233ahmedahmed155-"
+"cpu@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Arabic (Egypt) <https://hosted.weblate.org/projects/darky/"
 "master/ar_EG/>\n"
 "Language: ar_EG\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 2026.12.dev0\n"
 
 #: html/base.html:7
 msgid "Gifts"
@@ -138,7 +139,7 @@ msgstr "مستخدم"
 
 #: html/list.html:9 wishlist/models.py:29
 msgid "Title"
-msgstr "عنوان"
+msgstr "Tom Ovlien عنوان"
 
 #: html/list.html:10
 msgid "Price"
@@ -256,7 +257,7 @@ msgstr "هدية \"%s\" حذفت."
 #: wishlist/views.py:128
 #, fuzzy, python-format
 msgid "Gift \"%s\" updated."
-msgstr "تم تحديث \"([X6])."
+msgstr "Gift \"%s\" updated."
 
 #: wishlist/views.py:131
 msgid "Gift not updated!"
